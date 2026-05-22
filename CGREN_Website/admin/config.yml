@@ -1,0 +1,34 @@
+backend:
+  name: github
+  repo: Detshdhd/cgren-website
+  branch: main
+  base_url: https://api.netlify.com
+  auth_endpoint: auth
+
+media_folder: "CGREN_Website/documentos"
+public_folder: "/documentos"
+
+collections:
+  - name: "noticias"
+    label: "Noticias"
+    folder: "CGREN_Website/content/noticias"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - {label: "Título", name: "title", widget: "string"}
+      - {label: "Fecha", name: "date", widget: "datetime"}
+      - {label: "Categoría", name: "category", widget: "select", options: ["comunicados", "prensa", "eventos", "cepoe"]}
+      - {label: "Resumen", name: "excerpt", widget: "text"}
+      - {label: "Contenido", name: "body", widget: "markdown"}
+
+  - name: "documentos_cepoe"
+    label: "Documentos CEPOE"
+    folder: "CGREN_Website/content/documentos"
+    create: true
+    fields:
+      - {label: "Título", name: "title", widget: "string"}
+      - {label: "Fecha", name: "date", widget: "datetime"}
+      - {label: "Tipo", name: "type", widget: "select", options: ["DI", "DAE", "DO"]}
+      - {label: "Línea", name: "line", widget: "select", options: ["juridica", "seguridad", "historia"]}
+      - {label: "Descripción", name: "excerpt", widget: "text"}
+      - {label: "Archivo PDF", name: "pdf", widget: "file"}
