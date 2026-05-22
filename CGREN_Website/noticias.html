@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header -->
     <header class="header">
         <div class="header-container">
             <a href="index.html" class="logo">
@@ -40,7 +39,6 @@
         </div>
     </header>
 
-    <!-- Page Header -->
     <section class="page-header">
         <h1>Noticias CGREN</h1>
         <div class="breadcrumb">
@@ -50,177 +48,35 @@
         </div>
     </section>
 
-    <!-- News Section -->
     <section class="section">
         <div class="section-container">
-            <!-- Filter -->
             <div class="news-filter">
                 <select class="filter-select" id="categoryFilter">
                     <option value="all">Todas las categorías</option>
                     <option value="comunicados">Comunicados Oficiales</option>
                     <option value="prensa">Prensa</option>
                     <option value="eventos">Eventos</option>
-                    <option value="cepoе">CEPOE</option>
+                    <option value="cepoe">CEPOE</option>
                 </select>
                 <select class="filter-select" id="yearFilter">
                     <option value="all">Todos los años</option>
+                    <option value="2026">2026</option>
                     <option value="2025">2025</option>
-                    <option value="2024">2024</option>
                 </select>
             </div>
 
-            <!-- News Grid -->
             <div class="news-grid" id="newsGrid">
-                <!-- News Card 1 -->
-                <article class="news-card" data-category="comunicados" data-year="2025">
-                    <div class="news-card-image" style="background: linear-gradient(135deg, #6B1C2A 0%, #0A2342 100%); display: flex; align-items: center; justify-content: center;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" viewBox="0 0 24 24" stroke="rgba(255,255,255,0.3)">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                        </svg>
-                    </div>
-                    <div class="news-card-content">
-                        <div class="news-card-meta">
-                            <span class="news-card-category">Comunicados Oficiales</span>
-                            <span class="news-card-date">25 de abril, 2025</span>
-                        </div>
-                        <h3><a href="#">Comunicado a la Opinión Pública sobre los recientes atentados ocurridos en Cauca y Valle del Cauca</a></h3>
-                        <p>El Consejo de Generales de la Reserva del Ejército Nacional (CGREN) se permite expresar ante la opinión pública su más enérgico rechazo ante los recientes hechos de violencia...</p>
-                        <a href="#" class="news-card-link">
-                            Leer más
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                            </svg>
-                        </a>
-                    </div>
-                </article>
-
-                <!-- News Card 2 -->
-                <article class="news-card" data-category="eventos" data-year="2025">
-                    <div class="news-card-image" style="background: linear-gradient(135deg, #0A2342 0%, #4A1320 100%); display: flex; align-items: center; justify-content: center;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" viewBox="0 0 24 24" stroke="rgba(255,255,255,0.3)">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
-                        </svg>
-                    </div>
-                    <div class="news-card-content">
-                        <div class="news-card-meta">
-                            <span class="news-card-category">Eventos</span>
-                            <span class="news-card-date">20 de abril, 2025</span>
-                        </div>
-                        <h3><a href="#">Consejo de Generales lideró en Barranquilla análisis estratégico sobre seguridad regional</a></h3>
-                        <p>En un encuentro de alto nivel, los generales en retiro analizaron los desafíos actuales de la seguridad en la región Caribe y propusieron estrategias para fortalecer la institucionalidad...</p>
-                        <a href="#" class="news-card-link">
-                            Leer más
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                            </svg>
-                        </a>
-                    </div>
-                </article>
-
-                <!-- News Card 3 -->
-                <article class="news-card" data-category="cepoe" data-year="2025">
-                    <div class="news-card-image" style="background: linear-gradient(135deg, #D4AF37 0%, #B8960C 100%); display: flex; align-items: center; justify-content: center;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" viewBox="0 0 24 24" stroke="rgba(0,0,0,0.3)">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
-                        </svg>
-                    </div>
-                    <div class="news-card-content">
-                        <div class="news-card-meta">
-                            <span class="news-card-category">CEPOE</span>
-                            <span class="news-card-date">15 de abril, 2025</span>
-                        </div>
-                        <h3><a href="cepoe.html">CEPOE publica primer documento de análisis estratégico sobre defensa institucional</a></h3>
-                        <p>El Centro de Pensamiento y Observatorio Estratégico del CGREN presenta su primera publicación oficial con recomendaciones de política pública en materia de defensa...</p>
-                        <a href="cepoe.html" class="news-card-link">
-                            Leer más
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                            </svg>
-                        </a>
-                    </div>
-                </article>
-
-                <!-- News Card 4 -->
-                <article class="news-card" data-category="prensa" data-year="2025">
-                    <div class="news-card-image" style="background: linear-gradient(135deg, #1a3a5c 0%, #6B1C2A 100%); display: flex; align-items: center; justify-content: center;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" viewBox="0 0 24 24" stroke="rgba(255,255,255,0.3)">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/>
-                        </svg>
-                    </div>
-                    <div class="news-card-content">
-                        <div class="news-card-meta">
-                            <span class="news-card-category">Prensa</span>
-                            <span class="news-card-date">10 de abril, 2025</span>
-                        </div>
-                        <h3><a href="#">Asamblea Constitutiva del CGREN: 65 generales fundadores aprueban estatutos</a></h3>
-                        <p>En un histórico encuentro, 65 generales en retiro del Ejército Nacional de Colombia constituyeron formalmente el CGREN, aprobando por unanimidad la constitución y el plan estratégico 2025-2035...</p>
-                        <a href="#" class="news-card-link">
-                            Leer más
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                            </svg>
-                        </a>
-                    </div>
-                </article>
-
-                <!-- News Card 5 -->
-                <article class="news-card" data-category="comunicados" data-year="2025">
-                    <div class="news-card-image" style="background: linear-gradient(135deg, #4A1320 0%, #0A2342 100%); display: flex; align-items: center; justify-content: center;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" viewBox="0 0 24 24" stroke="rgba(255,255,255,0.3)">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                        </svg>
-                    </div>
-                    <div class="news-card-content">
-                        <div class="news-card-meta">
-                            <span class="news-card-category">Comunicados Oficiales</span>
-                            <span class="news-card-date">5 de abril, 2025</span>
-                        </div>
-                        <h3><a href="#">Posición institucional del CGREN sobre el respeto a las Fuerzas Militares</a></h3>
-                        <p>El Consejo de Generales de la Reserva reitera la importancia de respetar y valorar la labor de las Fuerzas Militares en la defensa de la democracia y el orden constitucional...</p>
-                        <a href="#" class="news-card-link">
-                            Leer más
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                            </svg>
-                        </a>
-                    </div>
-                </article>
-
-                <!-- News Card 6 -->
-                <article class="news-card" data-category="eventos" data-year="2025">
-                    <div class="news-card-image" style="background: linear-gradient(135deg, #0A2342 0%, #D4AF37 100%); display: flex; align-items: center; justify-content: center;">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" viewBox="0 0 24 24" stroke="rgba(255,255,255,0.3)">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-                        </svg>
-                    </div>
-                    <div class="news-card-content">
-                        <div class="news-card-meta">
-                            <span class="news-card-category">Eventos</span>
-                            <span class="news-card-date">1 de abril, 2025</span>
-                        </div>
-                        <h3><a href="#">CGREN firma convenio de cooperación con universidades para investigación histórica</a></h3>
-                        <p>El Consejo de Generales establece alianzas académicas para el desarrollo de investigaciones sobre la historia del Ejército Nacional y su contribución a la construcción del país...</p>
-                        <a href="#" class="news-card-link">
-                            Leer más
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                            </svg>
-                        </a>
-                    </div>
-                </article>
+                <p id="loadingMsg" style="text-align:center; color: var(--text-gray); padding: 40px 0;">Cargando noticias...</p>
             </div>
 
-            <!-- Pagination -->
-            <nav class="pagination">
-                <button class="pagination-btn" disabled aria-label="Página anterior">
+            <nav class="pagination" id="pagination" style="display:none;">
+                <button class="pagination-btn" id="prevBtn" disabled aria-label="Página anterior">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
                     </svg>
                 </button>
-                <a href="#" class="pagination-btn active">1</a>
-                <a href="#" class="pagination-btn">2</a>
-                <a href="#" class="pagination-btn">3</a>
-                <button class="pagination-btn" aria-label="Página siguiente">
+                <span id="pageNumbers"></span>
+                <button class="pagination-btn" id="nextBtn" aria-label="Página siguiente">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                     </svg>
@@ -229,7 +85,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-grid">
@@ -238,7 +93,6 @@
                     <p>Consejo de Generales de la Reserva del Ejército Nacional de Colombia</p>
                     <p class="tagline">"Honor, Compromiso y Dignidad"</p>
                 </div>
-                
                 <div class="footer-column">
                     <h4>Enlaces Rápidos</h4>
                     <ul class="footer-links">
@@ -249,7 +103,6 @@
                         <li><a href="index.html#contacto">Contacto</a></li>
                     </ul>
                 </div>
-                
                 <div class="footer-column">
                     <h4>Contacto</h4>
                     <ul class="footer-links">
@@ -257,7 +110,6 @@
                         <li><a href="tel:3018299297">301 829 9297</a></li>
                     </ul>
                 </div>
-                
                 <div class="footer-column">
                     <h4>Legal</h4>
                     <ul class="footer-links">
@@ -267,7 +119,6 @@
                     </ul>
                 </div>
             </div>
-            
             <div class="footer-bottom">
                 <p>&copy; 2025 CGREN - Consejo de Generales en Retiro del Ejército Nacional. Todos los derechos reservados.</p>
                 <div class="footer-bottom-links">
@@ -276,7 +127,6 @@
                     <a href="#">Código de Honor</a>
                 </div>
             </div>
-            
             <div class="footer-credit">
                 Diseño y desarrollo por <a href="#">Seed EM</a>
             </div>
@@ -284,26 +134,183 @@
     </footer>
 
     <script src="scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script>
-        // News filter functionality
-        document.getElementById('categoryFilter').addEventListener('change', filterNews);
-        document.getElementById('yearFilter').addEventListener('change', filterNews);
-        
-        function filterNews() {
-            const category = document.getElementById('categoryFilter').value;
-            const year = document.getElementById('yearFilter').value;
-            const cards = document.querySelectorAll('.news-card');
-            
-            cards.forEach(card => {
-                const cardCategory = card.dataset.category;
-                const cardYear = card.dataset.year;
-                
-                const categoryMatch = category === 'all' || cardCategory === category;
-                const yearMatch = year === 'all' || cardYear === year;
-                
-                card.style.display = (categoryMatch && yearMatch) ? 'block' : 'none';
-            });
+    // Carga noticias desde archivos Markdown generados por Decap CMS
+    // Los archivos están en: CGREN_Website/content/noticias/
+    // Cada archivo tiene frontmatter con: title, date, category, excerpt
+
+    const ITEMS_PER_PAGE = 6;
+    let allNoticias = [];
+    let currentPage = 1;
+
+    const gradients = {
+        comunicados: 'linear-gradient(135deg, #6B1C2A 0%, #0A2342 100%)',
+        prensa:       'linear-gradient(135deg, #1a3a5c 0%, #6B1C2A 100%)',
+        eventos:      'linear-gradient(135deg, #0A2342 0%, #4A1320 100%)',
+        cepoe:        'linear-gradient(135deg, #D4AF37 0%, #B8960C 100%)'
+    };
+
+    const categoryLabels = {
+        comunicados: 'Comunicados Oficiales',
+        prensa: 'Prensa',
+        eventos: 'Eventos',
+        cepoe: 'CEPOE'
+    };
+
+    function parseFrontmatter(text) {
+        const match = text.match(/^---\n([\s\S]*?)\n---/);
+        if (!match) return { data: {}, body: text };
+        const data = {};
+        match[1].split('\n').forEach(line => {
+            const [key, ...val] = line.split(':');
+            if (key && val.length) data[key.trim()] = val.join(':').trim().replace(/^["']|["']$/g, '');
+        });
+        return { data, body: text.replace(match[0], '').trim() };
+    }
+
+    function formatDate(dateStr) {
+        if (!dateStr) return '';
+        const d = new Date(dateStr);
+        const months = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+        return `${d.getDate()} de ${months[d.getMonth()]}, ${d.getFullYear()}`;
+    }
+
+    function renderCard(noticia) {
+        const cat = noticia.category || 'comunicados';
+        const grad = gradients[cat] || gradients.comunicados;
+        const strokeColor = cat === 'cepoe' ? 'rgba(0,0,0,0.3)' : 'rgba(255,255,255,0.3)';
+        const href = noticia.link || '#';
+        return `
+        <article class="news-card" data-category="${cat}" data-year="${noticia.year}">
+            <div class="news-card-image" style="background: ${grad}; display: flex; align-items: center; justify-content: center;">
+                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="none" viewBox="0 0 24 24" stroke="${strokeColor}">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                </svg>
+            </div>
+            <div class="news-card-content">
+                <div class="news-card-meta">
+                    <span class="news-card-category">${categoryLabels[cat] || cat}</span>
+                    <span class="news-card-date">${formatDate(noticia.date)}</span>
+                </div>
+                <h3><a href="${href}">${noticia.title}</a></h3>
+                <p>${noticia.excerpt || ''}</p>
+                <a href="${href}" class="news-card-link">
+                    Leer más
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </a>
+            </div>
+        </article>`;
+    }
+
+    function getFiltered() {
+        const cat = document.getElementById('categoryFilter').value;
+        const yr  = document.getElementById('yearFilter').value;
+        return allNoticias.filter(n => {
+            const catMatch = cat === 'all' || n.category === cat;
+            const yrMatch  = yr  === 'all' || n.year === yr;
+            return catMatch && yrMatch;
+        });
+    }
+
+    function renderPage() {
+        const filtered = getFiltered();
+        const grid = document.getElementById('newsGrid');
+        const pagination = document.getElementById('pagination');
+
+        if (filtered.length === 0) {
+            grid.innerHTML = '<p style="text-align:center; color: var(--text-gray); padding: 40px 0;">No hay noticias en esta categoría todavía.</p>';
+            pagination.style.display = 'none';
+            return;
         }
+
+        const totalPages = Math.ceil(filtered.length / ITEMS_PER_PAGE);
+        if (currentPage > totalPages) currentPage = 1;
+
+        const start = (currentPage - 1) * ITEMS_PER_PAGE;
+        const items = filtered.slice(start, start + ITEMS_PER_PAGE);
+
+        grid.innerHTML = items.map(renderCard).join('');
+
+        // Pagination
+        if (totalPages > 1) {
+            pagination.style.display = 'flex';
+            document.getElementById('prevBtn').disabled = currentPage === 1;
+            document.getElementById('nextBtn').disabled = currentPage === totalPages;
+            let nums = '';
+            for (let i = 1; i <= totalPages; i++) {
+                nums += `<a href="#" class="pagination-btn ${i === currentPage ? 'active' : ''}" onclick="goToPage(${i}); return false;">${i}</a>`;
+            }
+            document.getElementById('pageNumbers').innerHTML = nums;
+        } else {
+            pagination.style.display = 'none';
+        }
+    }
+
+    function goToPage(n) {
+        currentPage = n;
+        renderPage();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    document.getElementById('prevBtn').addEventListener('click', () => { currentPage--; renderPage(); });
+    document.getElementById('nextBtn').addEventListener('click', () => { currentPage++; renderPage(); });
+    document.getElementById('categoryFilter').addEventListener('change', () => { currentPage = 1; renderPage(); });
+    document.getElementById('yearFilter').addEventListener('change', () => { currentPage = 1; renderPage(); });
+
+    // Carga el índice de noticias generado por Netlify
+    // El archivo search.json lo genera Netlify automáticamente si existe
+    // Alternativa: cargamos directamente desde la API de GitHub
+    async function loadNoticias() {
+        try {
+            // Intenta cargar desde el archivo índice local (generado por el build)
+            const res = await fetch('content/noticias/index.json');
+            if (!res.ok) throw new Error('No index');
+            const files = await res.json();
+            const promises = files.map(f => fetch('content/noticias/' + f).then(r => r.text()));
+            const texts = await Promise.all(promises);
+            allNoticias = texts.map(t => {
+                const { data } = parseFrontmatter(t);
+                return {
+                    title: data.title || 'Sin título',
+                    date: data.date || '',
+                    category: data.category || 'comunicados',
+                    excerpt: data.excerpt || '',
+                    link: data.link || '#',
+                    year: data.date ? new Date(data.date).getFullYear().toString() : '2025'
+                };
+            }).sort((a, b) => new Date(b.date) - new Date(a.date));
+        } catch(e) {
+            // Si no hay index.json, carga los archivos directamente desde GitHub API
+            try {
+                const apiRes = await fetch('https://api.github.com/repos/Detshdhd/cgren-website/contents/CGREN_Website/content/noticias');
+                if (!apiRes.ok) throw new Error('GitHub API error');
+                const files = await apiRes.json();
+                const mdFiles = files.filter(f => f.name.endsWith('.md'));
+                const promises = mdFiles.map(f => fetch(f.download_url).then(r => r.text()));
+                const texts = await Promise.all(promises);
+                allNoticias = texts.map(t => {
+                    const { data } = parseFrontmatter(t);
+                    return {
+                        title: data.title || 'Sin título',
+                        date: data.date || '',
+                        category: data.category || 'comunicados',
+                        excerpt: data.excerpt || '',
+                        link: data.link || '#',
+                        year: data.date ? new Date(data.date).getFullYear().toString() : '2025'
+                    };
+                }).sort((a, b) => new Date(b.date) - new Date(a.date));
+            } catch(e2) {
+                allNoticias = [];
+            }
+        }
+        document.getElementById('loadingMsg')?.remove();
+        renderPage();
+    }
+
+    loadNoticias();
     </script>
 </body>
 </html>
