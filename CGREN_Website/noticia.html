@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="pageTitle">Noticia - CGREN</title>
+    <meta name="description" id="pageDesc" content="Noticias del Consejo de Generales de la Reserva del Ejército Nacional de Colombia.">
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .noticia-body {
+            max-width: 780px;
+            margin: 0 auto;
+            padding: 48px 24px 80px;
+        }
+        .noticia-header {
+            margin-bottom: 36px;
+        }
+        .noticia-meta {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        .noticia-category {
+            background: var(--burgundy, #6B1C2A);
+            color: #fff;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+        .noticia-date {
+            color: var(--text-gray, #888);
+            font-size: 0.9rem;
+        }
+        .noticia-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.6rem, 4vw, 2.4rem);
+            font-weight: 700;
+            color: var(--primary-blue, #0A2342);
+            line-height: 1.25;
+            margin-bottom: 16px;
+        }
+        .noticia-excerpt {
+            font-size: 1.1rem;
+            color: var(--text-gray, #555);
+            line-height: 1.7;
+            border-left: 4px solid var(--gold, #D4AF37);
+            padding-left: 20px;
+            margin-bottom: 0;
+        }
+        .noticia-divider {
+            border: none;
+            border-top: 1px solid #e5e7eb;
+            margin: 36px 0;
+        }
+        .noticia-content {
+            font-size: 1.05rem;
+            line-height: 1.85;
+            color: #2d2d2d;
+        }
+        .noticia-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--primary-blue, #0A2342);
+            margin: 2rem 0 1rem;
+        }
+        .noticia-content h3 {
+            font-size: 1.2rem;
+            color: var(--primary-blue, #0A2342);
+            margin: 1.5rem 0 0.75rem;
+        }
+        .noticia-content p {
+            margin-bottom: 1.25rem;
+        }
+        .noticia-content ul, .noticia-content ol {
+            margin: 0 0 1.25rem 1.5rem;
+        }
+        .noticia-content li {
+            margin-bottom: 0.5rem;
+        }
+        .noticia-content blockquote {
+            border-left: 4px solid var(--gold, #D4AF37);
+            padding-left: 20px;
+            margin: 1.5rem 0;
+            color: #555;
+            font-style: italic;
+        }
+        .noticia-content strong { color: var(--primary-blue, #0A2342); }
+        .noticia-content a { color: var(--burgundy, #6B1C2A); text-decoration: underline; }
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--primary-blue, #0A2342);
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-decoration: none;
+            margin-bottom: 32px;
+            transition: gap 0.2s;
+        }
+        .back-link:hover { gap: 12px; }
+        .noticia-loading {
+            text-align: center;
+            padding: 80px 24px;
+            color: #888;
+        }
+        .noticia-error {
+            text-align: center;
+            padding: 80px 24px;
+        }
+        .noticia-error h2 { color: var(--primary-blue, #0A2342); margin-bottom: 12px; }
+        .noticia-error p { color: #888; }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="CGREN Logo">
+                <div class="logo-text">
+                    <span class="main">CGREN</span>
+                    <span class="sub">Honor, Compromiso y Dignidad</span>
+                </div>
+            </a>
+            <nav class="nav">
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html#quienes-somos">Quiénes Somos</a></li>
+                    <li><a href="cepoe.html">Plan Estratégico</a></li>
+                    <li><a href="noticias.html" class="active">Noticias</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                </ul>
+                <a href="index.html#contacto" class="btn-gold">Solicitar Info</a>
+            </nav>
+            <button class="mobile-menu-btn" aria-label="Menú">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <div class="noticia-body" id="noticiaContainer">
+        <div class="noticia-loading">Cargando noticia...</div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="logo.png" alt="CGREN Logo">
+                    <p>Consejo de Generales de la Reserva del Ejército Nacional de Colombia</p>
+                    <p class="tagline">"Honor, Compromiso y Dignidad"</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="index.html#quienes-somos">Quiénes Somos</a></li>
+                        <li><a href="cepoe.html">Plan Estratégico</a></li>
+                        <li><a href="noticias.html">Noticias</a></li>
+                        <li><a href="index.html#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contacto</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:cgrenejc@gmail.com">cgrenejc@gmail.com</a></li>
+                        <li><a href="tel:3018299297">301 829 9297</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Términos de Uso</a></li>
+                        <li><a href="#">Código de Honor</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CGREN - Consejo de Generales en Retiro del Ejército Nacional. Todos los derechos reservados.</p>
+            </div>
+            <div class="footer-credit">Diseño y desarrollo por <a href="#">Seed EM</a></div>
+        </div>
+    </footer>
+
+    <script src="scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script>
+    const categoryLabels = {
+        comunicados: 'Comunicados Oficiales',
+        prensa: 'Prensa',
+        eventos: 'Eventos',
+        cepoe: 'CEPOE'
+    };
+
+    function parseFrontmatter(text) {
+        const match = text.match(/^---\n([\s\S]*?)\n---/);
+        if (!match) return { data: {}, body: text };
+        const data = {};
+        match[1].split('\n').forEach(line => {
+            const [key, ...val] = line.split(':');
+            if (key && val.length) data[key.trim()] = val.join(':').trim().replace(/^["']|["']$/g, '');
+        });
+        return { data, body: text.replace(match[0], '').trim() };
+    }
+
+    function formatDate(dateStr) {
+        if (!dateStr) return '';
+        const d = new Date(dateStr);
+        const months = ['enero','febrero','marzo','abril','mayo','junio','julio','agosto','septiembre','octubre','noviembre','diciembre'];
+        return `${d.getDate()} de ${months[d.getMonth()]}, ${d.getFullYear()}`;
+    }
+
+    function renderNoticia(data, body) {
+        const cat = data.category || 'comunicados';
+        document.getElementById('pageTitle').textContent = (data.title || 'Noticia') + ' - CGREN';
+        document.getElementById('pageDesc').content = data.excerpt || '';
+
+        document.getElementById('noticiaContainer').innerHTML = `
+            <a href="noticias.html" class="back-link">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="18" height="18">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                </svg>
+                Volver a Noticias
+            </a>
+            <div class="noticia-header">
+                <div class="noticia-meta">
+                    <span class="noticia-category">${categoryLabels[cat] || cat}</span>
+                    <span class="noticia-date">${formatDate(data.date)}</span>
+                </div>
+                <h1 class="noticia-title">${data.title || ''}</h1>
+                ${data.excerpt ? `<p class="noticia-excerpt">${data.excerpt}</p>` : ''}
+            </div>
+            <hr class="noticia-divider">
+            <div class="noticia-content">
+                ${body ? marked.parse(body) : '<p style="color:#888">Esta noticia no tiene contenido adicional.</p>'}
+            </div>
+        `;
+    }
+
+    function showError() {
+        document.getElementById('noticiaContainer').innerHTML = `
+            <a href="noticias.html" class="back-link">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" width="18" height="18">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                </svg>
+                Volver a Noticias
+            </a>
+            <div class="noticia-error">
+                <h2>Noticia no encontrada</h2>
+                <p>El artículo que buscas no existe o fue eliminado.</p>
+            </div>
+        `;
+    }
+
+    async function loadNoticia() {
+        // Lee el parámetro ?slug=nombre-del-archivo de la URL
+        const params = new URLSearchParams(window.location.search);
+        const slug = params.get('slug');
+        if (!slug) { showError(); return; }
+
+        try {
+            // Intenta cargar localmente primero
+            let res = await fetch(`content/noticias/${slug}.md`);
+            if (!res.ok) throw new Error('not found local');
+            const text = await res.text();
+            const { data, body } = parseFrontmatter(text);
+            renderNoticia(data, body);
+        } catch(e) {
+            try {
+                // Fallback: carga desde GitHub API
+                const res = await fetch(`https://raw.githubusercontent.com/Detshdhd/cgren-website/main/CGREN_Website/content/noticias/${slug}.md`);
+                if (!res.ok) throw new Error('not found github');
+                const text = await res.text();
+                const { data, body } = parseFrontmatter(text);
+                renderNoticia(data, body);
+            } catch(e2) {
+                showError();
+            }
+        }
+    }
+
+    loadNoticia();
+    </script>
+</body>
+</html>
