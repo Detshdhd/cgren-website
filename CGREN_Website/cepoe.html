@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Header -->
     <header class="header">
         <div class="header-container">
             <a href="index.html" class="logo">
@@ -40,7 +39,6 @@
         </div>
     </header>
 
-    <!-- Page Header -->
     <section class="page-header">
         <h1>CEPOE</h1>
         <div class="breadcrumb">
@@ -61,9 +59,7 @@
             <h2 class="section-title">Centro de Pensamiento y Observatorio Estratégico</h2>
             <div class="section-divider"></div>
             <p class="cepoe-tagline">"Un rumbo claro para una Colombia segura y democrática"</p>
-            
             <p class="section-text">El Plan Estratégico Integral 2025–2035 define un horizonte claro para fortalecer la seguridad, la institucionalidad y la memoria nacional, anticipando riesgos y orientando la acción del Estado con visión, rigor y compromiso democrático.</p>
-            
             <div class="cepoe-info" style="margin-top: 32px;">
                 <h3>¿Qué es el CEPOE?</h3>
                 <p>El CEPOE es el espacio donde la experiencia de la reserva militar se transforma en pensamiento estratégico para la Nación. Desde aquí se estudian los desafíos jurídicos, de seguridad y memoria del Ejército Nacional, generando conocimiento que fortalece la democracia y la institucionalidad.</p>
@@ -76,7 +72,6 @@
         <div class="section-container">
             <h2 class="section-title">Líneas de Investigación</h2>
             <div class="section-divider"></div>
-            
             <div class="cards-grid">
                 <div class="card">
                     <div class="card-icon">
@@ -87,7 +82,6 @@
                     <h3>Defensa Jurídica Institucional</h3>
                     <p>Línea orientada a analizar, documentar y fortalecer la defensa jurídica de los miembros de la reserva y del Ejército Nacional, garantizando respaldo técnico y rigor ético ante desafíos legales complejos.</p>
                 </div>
-                
                 <div class="card">
                     <div class="card-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -97,7 +91,6 @@
                     <h3>Seguridad y Defensa Nacional</h3>
                     <p>Línea dedicada a estudiar riesgos, amenazas y dinámicas que impactan la estabilidad y soberanía de Colombia, integrando dimensiones políticas, económicas, sociales, ambientales y militares.</p>
                 </div>
-                
                 <div class="card">
                     <div class="card-icon">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -116,18 +109,15 @@
         <div class="section-container">
             <h2 class="section-title">Tipos de Documentos</h2>
             <div class="section-divider"></div>
-            
             <div class="cards-grid">
                 <div class="card" style="border-left: 4px solid var(--gold);">
                     <h3 style="color: var(--gold);">DI - Documentos de Investigación</h3>
                     <p>Son trabajos de mayor profundidad e investigación académica, construidos con metodología rigurosa y evidencia verificable. Su propósito es desarrollar doctrina, fortalecer la defensa jurídica institucional, enriquecer las políticas de seguridad y defensa nacional y proyectar el legado histórico militar.</p>
                 </div>
-                
                 <div class="card" style="border-left: 4px solid var(--primary-blue);">
                     <h3 style="color: var(--primary-blue);">DAE - Documentos de Análisis Estratégico</h3>
                     <p>Traducen coyunturas complejas con propuestas de políticas públicas, integrando análisis técnico, jurídico y estratégico para orientar la toma de decisiones institucionales. Es un documento oficial que expresa la postura del CGREN en temas prioritarios del país.</p>
                 </div>
-                
                 <div class="card" style="border-left: 4px solid var(--burgundy);">
                     <h3 style="color: var(--burgundy);">DO - Documentos de Opinión</h3>
                     <p>Explica coyunturas, interpreta fenómenos relevantes y contribuye al debate nacional desde la voz del autor, sin comprometer la postura institucional del CGREN.</p>
@@ -141,8 +131,7 @@
         <div class="section-container">
             <h2 class="section-title">Repositorio de Documentos</h2>
             <div class="section-divider"></div>
-            
-            <!-- Filter -->
+
             <div class="news-filter">
                 <select class="filter-select" id="docTypeFilter">
                     <option value="all">Todos los tipos</option>
@@ -157,170 +146,19 @@
                     <option value="historia">Legado Histórico</option>
                 </select>
             </div>
-            
-            <!-- Documents Grid -->
+
             <div class="documents-grid" id="documentsGrid">
-                <!-- Document 1 -->
-                <article class="document-card" data-type="DAE" data-line="seguridad">
-                    <div class="document-card-header">
-                        <div class="document-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h4>Análisis de la situación de seguridad en la región fronteriza con Venezuela</h4>
-                        </div>
-                    </div>
-                    <div class="document-card-meta">
-                        <span class="document-type-badge">DAE-001</span>
-                        <span class="document-date">Abril 2025</span>
-                    </div>
-                    <p>Documento de análisis estratégico sobre los desafíos de seguridad en la frontera colombo-venezolana y recomendaciones de política pública.</p>
-                    <a href="#" class="document-download">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
-                        </svg>
-                        Descargar PDF
-                    </a>
-                </article>
-                
-                <!-- Document 2 -->
-                <article class="document-card" data-type="DI" data-line="juridica">
-                    <div class="document-card-header">
-                        <div class="document-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h4>Marco jurídico para la defensa de miembros de la reserva activa</h4>
-                        </div>
-                    </div>
-                    <div class="document-card-meta">
-                        <span class="document-type-badge">DI-001</span>
-                        <span class="document-date">Marzo 2025</span>
-                    </div>
-                    <p>Investigación sobre el marco legal y las garantías procesales para los miembros de la reserva del Ejército Nacional en el sistema judicial colombiano.</p>
-                    <a href="#" class="document-download">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
-                        </svg>
-                        Descargar PDF
-                    </a>
-                </article>
-                
-                <!-- Document 3 -->
-                <article class="document-card" data-type="DO" data-line="seguridad">
-                    <div class="document-card-header">
-                        <div class="document-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h4>Reflexiones sobre el papel de las Fuerzas Militares en la democracia</h4>
-                        </div>
-                    </div>
-                    <div class="document-card-meta">
-                        <span class="document-type-badge">DO-001</span>
-                        <span class="document-date">Marzo 2025</span>
-                    </div>
-                    <p>Ensayo de opinión sobre la relación entre las instituciones militares y la democracia colombiana, desde la perspectiva de la experiencia.</p>
-                    <a href="#" class="document-download">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
-                        </svg>
-                        Descargar PDF
-                    </a>
-                </article>
-                
-                <!-- Document 4 -->
-                <article class="document-card" data-type="DI" data-line="historia">
-                    <div class="document-card-header">
-                        <div class="document-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h4>Historia del Ejército Nacional: Contribución a la construcción de la nación</h4>
-                        </div>
-                    </div>
-                    <div class="document-card-meta">
-                        <span class="document-type-badge">DI-002</span>
-                        <span class="document-date">Febrero 2025</span>
-                    </div>
-                    <p>Investigación histórica sobre el papel del Ejército Nacional en la construcción y defensa del Estado colombiano durante el siglo XX.</p>
-                    <a href="#" class="document-download">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
-                        </svg>
-                        Descargar PDF
-                    </a>
-                </article>
-                
-                <!-- Document 5 -->
-                <article class="document-card" data-type="DAE" data-line="seguridad">
-                    <div class="document-card-header">
-                        <div class="document-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h4>Propuesta de fortalecimiento de la política de defensa nacional</h4>
-                        </div>
-                    </div>
-                    <div class="document-card-meta">
-                        <span class="document-type-badge">DAE-002</span>
-                        <span class="document-date">Febrero 2025</span>
-                    </div>
-                    <p>Documento de propuesta con recomendaciones para el fortalecimiento de la política de defensa y seguridad nacional desde la perspectiva institucional.</p>
-                    <a href="#" class="document-download">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
-                        </svg>
-                        Descargar PDF
-                    </a>
-                </article>
-                
-                <!-- Document 6 -->
-                <article class="document-card" data-type="DI" data-line="juridica">
-                    <div class="document-card-header">
-                        <div class="document-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h4>Due process guarantees for military personnel in transitional justice systems</h4>
-                        </div>
-                    </div>
-                    <div class="document-card-meta">
-                        <span class="document-type-badge">DI-003</span>
-                        <span class="document-date">Enero 2025</span>
-                    </div>
-                    <p>Investigación comparada sobre las garantías procesales del personal militar en sistemas de justicia transicional en América Latina.</p>
-                    <a href="#" class="document-download">
-                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
-                        </svg>
-                        Descargar PDF
-                    </a>
-                </article>
+                <p id="loadingMsg" style="text-align:center; color: var(--text-gray); padding: 40px 0;">Cargando documentos...</p>
             </div>
-            
-            <!-- Pagination -->
-            <nav class="pagination">
-                <button class="pagination-btn" disabled aria-label="Página anterior">
+
+            <nav class="pagination" id="pagination" style="display:none;">
+                <button class="pagination-btn" id="prevBtn" disabled aria-label="Página anterior">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
                     </svg>
                 </button>
-                <a href="#" class="pagination-btn active">1</a>
-                <a href="#" class="pagination-btn">2</a>
-                <button class="pagination-btn" aria-label="Página siguiente">
+                <span id="pageNumbers"></span>
+                <button class="pagination-btn" id="nextBtn" aria-label="Página siguiente">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                     </svg>
@@ -329,7 +167,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-grid">
@@ -338,7 +175,6 @@
                     <p>Consejo de Generales de la Reserva del Ejército Nacional de Colombia</p>
                     <p class="tagline">"Honor, Compromiso y Dignidad"</p>
                 </div>
-                
                 <div class="footer-column">
                     <h4>Enlaces Rápidos</h4>
                     <ul class="footer-links">
@@ -349,7 +185,6 @@
                         <li><a href="index.html#contacto">Contacto</a></li>
                     </ul>
                 </div>
-                
                 <div class="footer-column">
                     <h4>Contacto</h4>
                     <ul class="footer-links">
@@ -357,7 +192,6 @@
                         <li><a href="tel:3018299297">301 829 9297</a></li>
                     </ul>
                 </div>
-                
                 <div class="footer-column">
                     <h4>Legal</h4>
                     <ul class="footer-links">
@@ -367,7 +201,6 @@
                     </ul>
                 </div>
             </div>
-            
             <div class="footer-bottom">
                 <p>&copy; 2025 CGREN - Consejo de Generales en Retiro del Ejército Nacional. Todos los derechos reservados.</p>
                 <div class="footer-bottom-links">
@@ -376,7 +209,6 @@
                     <a href="#">Código de Honor</a>
                 </div>
             </div>
-            
             <div class="footer-credit">
                 Diseño y desarrollo por <a href="#">Seed EM</a>
             </div>
@@ -385,25 +217,160 @@
 
     <script src="scripts.js"></script>
     <script>
-        // Document filter functionality
-        document.getElementById('docTypeFilter').addEventListener('change', filterDocuments);
-        document.getElementById('docLineFilter').addEventListener('change', filterDocuments);
-        
-        function filterDocuments() {
-            const type = document.getElementById('docTypeFilter').value;
-            const line = document.getElementById('docLineFilter').value;
-            const cards = document.querySelectorAll('.document-card');
-            
-            cards.forEach(card => {
-                const cardType = card.dataset.type;
-                const cardLine = card.dataset.line;
-                
-                const typeMatch = type === 'all' || cardType === type;
-                const lineMatch = line === 'all' || cardLine === line;
-                
-                card.style.display = (typeMatch && lineMatch) ? 'block' : 'none';
-            });
+    // Carga documentos desde archivos Markdown generados por Decap CMS
+    // Los archivos están en: CGREN_Website/content/documentos/
+
+    const ITEMS_PER_PAGE = 6;
+    let allDocs = [];
+    let currentPage = 1;
+
+    function parseFrontmatter(text) {
+        const match = text.match(/^---\n([\s\S]*?)\n---/);
+        if (!match) return { data: {}, body: text };
+        const data = {};
+        match[1].split('\n').forEach(line => {
+            const [key, ...val] = line.split(':');
+            if (key && val.length) data[key.trim()] = val.join(':').trim().replace(/^["']|["']$/g, '');
+        });
+        return { data, body: text.replace(match[0], '').trim() };
+    }
+
+    function formatDate(dateStr) {
+        if (!dateStr) return '';
+        const d = new Date(dateStr);
+        const months = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+        return `${months[d.getMonth()]} ${d.getFullYear()}`;
+    }
+
+    function renderDocCard(doc) {
+        const pdfHref = doc.pdf || '#';
+        const hasFile = doc.pdf && doc.pdf !== '#';
+        return `
+        <article class="document-card" data-type="${doc.type || 'DI'}" data-line="${doc.line || 'seguridad'}">
+            <div class="document-card-header">
+                <div class="document-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                    </svg>
+                </div>
+                <div>
+                    <h4>${doc.title || 'Sin título'}</h4>
+                </div>
+            </div>
+            <div class="document-card-meta">
+                <span class="document-type-badge">${doc.type || 'DI'}</span>
+                <span class="document-date">${formatDate(doc.date)}</span>
+            </div>
+            <p>${doc.excerpt || ''}</p>
+            ${hasFile ? `
+            <a href="${pdfHref}" class="document-download" target="_blank" rel="noopener">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                </svg>
+                Descargar PDF
+            </a>` : '<span style="color: var(--text-gray); font-size: 0.85rem;">Documento próximamente</span>'}
+        </article>`;
+    }
+
+    function getFiltered() {
+        const type = document.getElementById('docTypeFilter').value;
+        const line = document.getElementById('docLineFilter').value;
+        return allDocs.filter(d => {
+            const typeMatch = type === 'all' || d.type === type;
+            const lineMatch = line === 'all' || d.line === line;
+            return typeMatch && lineMatch;
+        });
+    }
+
+    function renderPage() {
+        const filtered = getFiltered();
+        const grid = document.getElementById('documentsGrid');
+        const pagination = document.getElementById('pagination');
+
+        if (filtered.length === 0) {
+            grid.innerHTML = '<p style="text-align:center; color: var(--text-gray); padding: 40px 0;">No hay documentos en esta categoría todavía.</p>';
+            pagination.style.display = 'none';
+            return;
         }
+
+        const totalPages = Math.ceil(filtered.length / ITEMS_PER_PAGE);
+        if (currentPage > totalPages) currentPage = 1;
+
+        const start = (currentPage - 1) * ITEMS_PER_PAGE;
+        const items = filtered.slice(start, start + ITEMS_PER_PAGE);
+        grid.innerHTML = items.map(renderDocCard).join('');
+
+        if (totalPages > 1) {
+            pagination.style.display = 'flex';
+            document.getElementById('prevBtn').disabled = currentPage === 1;
+            document.getElementById('nextBtn').disabled = currentPage === totalPages;
+            let nums = '';
+            for (let i = 1; i <= totalPages; i++) {
+                nums += `<a href="#" class="pagination-btn ${i === currentPage ? 'active' : ''}" onclick="goToPage(${i}); return false;">${i}</a>`;
+            }
+            document.getElementById('pageNumbers').innerHTML = nums;
+        } else {
+            pagination.style.display = 'none';
+        }
+    }
+
+    function goToPage(n) {
+        currentPage = n;
+        renderPage();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    document.getElementById('prevBtn').addEventListener('click', () => { currentPage--; renderPage(); });
+    document.getElementById('nextBtn').addEventListener('click', () => { currentPage++; renderPage(); });
+    document.getElementById('docTypeFilter').addEventListener('change', () => { currentPage = 1; renderPage(); });
+    document.getElementById('docLineFilter').addEventListener('change', () => { currentPage = 1; renderPage(); });
+
+    async function loadDocumentos() {
+        try {
+            const res = await fetch('content/documentos/index.json');
+            if (!res.ok) throw new Error('No index');
+            const files = await res.json();
+            const promises = files.map(f => fetch('content/documentos/' + f).then(r => r.text()));
+            const texts = await Promise.all(promises);
+            allDocs = texts.map(t => {
+                const { data } = parseFrontmatter(t);
+                return {
+                    title: data.title || 'Sin título',
+                    date: data.date || '',
+                    type: data.type || 'DI',
+                    line: data.line || 'seguridad',
+                    excerpt: data.excerpt || '',
+                    pdf: data.pdf || ''
+                };
+            }).sort((a, b) => new Date(b.date) - new Date(a.date));
+        } catch(e) {
+            try {
+                const apiRes = await fetch('https://api.github.com/repos/Detshdhd/cgren-website/contents/CGREN_Website/content/documentos');
+                if (!apiRes.ok) throw new Error('GitHub API error');
+                const files = await apiRes.json();
+                const mdFiles = files.filter(f => f.name.endsWith('.md'));
+                const promises = mdFiles.map(f => fetch(f.download_url).then(r => r.text()));
+                const texts = await Promise.all(promises);
+                allDocs = texts.map(t => {
+                    const { data } = parseFrontmatter(t);
+                    return {
+                        title: data.title || 'Sin título',
+                        date: data.date || '',
+                        type: data.type || 'DI',
+                        line: data.line || 'seguridad',
+                        excerpt: data.excerpt || '',
+                        pdf: data.pdf || ''
+                    };
+                }).sort((a, b) => new Date(b.date) - new Date(a.date));
+            } catch(e2) {
+                allDocs = [];
+            }
+        }
+        document.getElementById('loadingMsg')?.remove();
+        renderPage();
+    }
+
+    loadDocumentos();
     </script>
 </body>
 </html>
