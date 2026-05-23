@@ -10,270 +10,166 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --blue:     #0A2342;
-            --blue-l:   #0D2D54;
-            --burg:     #6B1C2A;
-            --burg-d:   #4A1320;
-            --gold:     #D4AF37;
-            --gold-b:   #F0C14B;
-            --gold-d:   #B8960C;
-            --white:    #FFFFFF;
-            --g50:      #FAFAFA;
-            --g100:     #F4F5F7;
-            --g200:     #E9ECEF;
-            --g300:     #DEE2E6;
-            --g500:     #6C757D;
-            --g700:     #495057;
-            --g900:     #212529;
-            --green:    #1a7a4a;
-            --green-l:  #e8f5ee;
-            --red:      #c0392b;
-            --red-l:    #fdecea;
-            --shadow:   0 4px 24px rgba(10,35,66,0.10);
-            --radius:   12px;
+            --blue:#0A2342;--blue-l:#0D2D54;--burg:#6B1C2A;--burg-d:#4A1320;
+            --gold:#D4AF37;--gold-b:#F0C14B;--gold-d:#B8960C;--white:#FFFFFF;
+            --g50:#FAFAFA;--g100:#F4F5F7;--g200:#E9ECEF;--g300:#DEE2E6;
+            --g500:#6C757D;--g700:#495057;--g900:#212529;
+            --green:#1a7a4a;--green-l:#e8f5ee;--red:#c0392b;--red-l:#fdecea;
+            --shadow:0 4px 24px rgba(10,35,66,0.10);--radius:12px;
         }
-        * { margin:0; padding:0; box-sizing:border-box; }
-        body {
-            font-family: 'Inter', sans-serif;
-            background: var(--g100);
-            color: var(--g900);
-            min-height: 100vh;
-        }
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{font-family:'Inter',sans-serif;background:var(--g100);color:var(--g900);min-height:100vh;}
 
-        /* ── LOGIN ── */
-        .login-wrap {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, var(--blue) 0%, var(--burg-d) 100%);
-            padding: 24px;
-        }
-        .login-card {
-            background: var(--white);
-            border-radius: 20px;
-            padding: 48px 40px;
-            width: 100%;
-            max-width: 420px;
-            box-shadow: 0 24px 80px rgba(0,0,0,0.25);
-            text-align: center;
-        }
-        .login-logo { height: 80px; margin-bottom: 8px; }
-        .login-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.6rem;
-            color: var(--blue);
-            margin-bottom: 4px;
-        }
-        .login-sub { font-size: 0.85rem; color: var(--g500); margin-bottom: 36px; letter-spacing: 0.05em; text-transform: uppercase; }
-        .login-card label { display: block; text-align: left; font-size: 0.8rem; font-weight: 600; color: var(--g700); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.05em; }
-        .login-card input {
-            width: 100%; padding: 12px 16px; border: 1.5px solid var(--g200);
-            border-radius: 10px; font-size: 0.95rem; margin-bottom: 20px;
-            transition: border-color 0.2s; outline: none; font-family: inherit;
-        }
-        .login-card input:focus { border-color: var(--gold); }
-        .btn-login {
-            width: 100%; padding: 14px; background: linear-gradient(135deg, var(--gold) 0%, var(--gold-d) 100%);
-            color: var(--blue); font-weight: 700; font-size: 1rem; border: none;
-            border-radius: 10px; cursor: pointer; letter-spacing: 0.05em;
-            transition: opacity 0.2s; font-family: inherit;
-        }
-        .btn-login:hover { opacity: 0.9; }
-        .login-error { background: var(--red-l); color: var(--red); border-radius: 8px; padding: 10px 14px; font-size: 0.85rem; margin-bottom: 16px; display: none; }
+        /* LOGIN */
+        .login-wrap{min-height:100vh;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,var(--blue) 0%,var(--burg-d) 100%);padding:24px;}
+        .login-card{background:var(--white);border-radius:20px;padding:48px 40px;width:100%;max-width:420px;box-shadow:0 24px 80px rgba(0,0,0,0.25);text-align:center;}
+        .login-logo{height:80px;margin-bottom:8px;}
+        .login-title{font-family:'Playfair Display',serif;font-size:1.6rem;color:var(--blue);margin-bottom:4px;}
+        .login-sub{font-size:0.85rem;color:var(--g500);margin-bottom:36px;letter-spacing:0.05em;text-transform:uppercase;}
+        .login-card label{display:block;text-align:left;font-size:0.8rem;font-weight:600;color:var(--g700);margin-bottom:6px;text-transform:uppercase;letter-spacing:0.05em;}
+        .login-card input{width:100%;padding:12px 16px;border:1.5px solid var(--g200);border-radius:10px;font-size:0.95rem;margin-bottom:20px;transition:border-color 0.2s;outline:none;font-family:inherit;}
+        .login-card input:focus{border-color:var(--gold);}
+        .btn-login{width:100%;padding:14px;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-d) 100%);color:var(--blue);font-weight:700;font-size:1rem;border:none;border-radius:10px;cursor:pointer;letter-spacing:0.05em;transition:opacity 0.2s;font-family:inherit;}
+        .btn-login:hover{opacity:0.9;}
+        .login-error{background:var(--red-l);color:var(--red);border-radius:8px;padding:10px 14px;font-size:0.85rem;margin-bottom:16px;display:none;}
 
-        /* ── APP SHELL ── */
-        #app { display: none; min-height: 100vh; flex-direction: column; }
+        /* TOKEN STEP */
+        .token-note{font-size:0.82rem;color:var(--g500);text-align:left;margin-bottom:20px;line-height:1.5;background:var(--g50);border-radius:8px;padding:12px;border:1px solid var(--g200);}
 
-        /* ── TOP BAR ── */
-        .topbar {
-            background: var(--blue);
-            padding: 0 32px;
-            height: 68px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.15);
-            position: sticky; top: 0; z-index: 100;
-        }
-        .topbar-brand { display: flex; align-items: center; gap: 14px; }
-        .topbar-brand img { height: 44px; }
-        .topbar-brand-text .main { font-size: 1.1rem; font-weight: 700; color: var(--white); letter-spacing: 2px; }
-        .topbar-brand-text .sub { font-size: 0.7rem; color: var(--gold); font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
-        .topbar-right { display: flex; align-items: center; gap: 16px; }
-        .topbar-user { color: var(--g300); font-size: 0.85rem; }
-        .btn-logout {
-            background: rgba(255,255,255,0.1); color: var(--white); border: 1px solid rgba(255,255,255,0.2);
-            padding: 7px 16px; border-radius: 8px; cursor: pointer; font-size: 0.82rem;
-            font-family: inherit; transition: background 0.2s;
-        }
-        .btn-logout:hover { background: rgba(255,255,255,0.2); }
+        /* APP */
+        #app{display:none;min-height:100vh;flex-direction:column;}
+        .topbar{background:var(--blue);padding:0 32px;height:68px;display:flex;align-items:center;justify-content:space-between;box-shadow:0 2px 12px rgba(0,0,0,0.15);position:sticky;top:0;z-index:100;}
+        .topbar-brand{display:flex;align-items:center;gap:14px;}
+        .topbar-brand img{height:44px;}
+        .topbar-brand-text .main{font-size:1.1rem;font-weight:700;color:var(--white);letter-spacing:2px;}
+        .topbar-brand-text .sub{font-size:0.7rem;color:var(--gold);font-weight:600;letter-spacing:1px;text-transform:uppercase;}
+        .topbar-right{display:flex;align-items:center;gap:16px;}
+        .topbar-user{color:var(--g300);font-size:0.85rem;}
+        .topbar-role{font-size:0.72rem;padding:3px 10px;border-radius:20px;font-weight:600;text-transform:uppercase;letter-spacing:0.05em;}
+        .role-admin{background:var(--gold);color:var(--blue);}
+        .role-noticiero{background:rgba(255,255,255,0.15);color:var(--white);}
+        .role-repositorio{background:rgba(255,255,255,0.15);color:var(--white);}
+        .btn-logout{background:rgba(255,255,255,0.1);color:var(--white);border:1px solid rgba(255,255,255,0.2);padding:7px 16px;border-radius:8px;cursor:pointer;font-size:0.82rem;font-family:inherit;transition:background 0.2s;}
+        .btn-logout:hover{background:rgba(255,255,255,0.2);}
 
-        /* ── MAIN LAYOUT ── */
-        .app-body { display: flex; flex: 1; }
+        /* LAYOUT */
+        .app-body{display:flex;flex:1;}
+        .sidebar{width:240px;background:var(--white);border-right:1px solid var(--g200);padding:28px 16px;flex-shrink:0;min-height:calc(100vh - 68px);}
+        .sidebar-label{font-size:0.7rem;font-weight:700;color:var(--g500);text-transform:uppercase;letter-spacing:0.1em;padding:0 12px;margin-bottom:8px;}
+        .sidebar-item{display:flex;align-items:center;gap:10px;padding:11px 12px;border-radius:10px;cursor:pointer;font-size:0.9rem;font-weight:500;color:var(--g700);transition:all 0.15s;margin-bottom:2px;border:none;background:none;width:100%;text-align:left;font-family:inherit;}
+        .sidebar-item:hover{background:var(--g100);color:var(--blue);}
+        .sidebar-item.active{background:rgba(10,35,66,0.07);color:var(--blue);font-weight:600;}
+        .sidebar-item svg{width:18px;height:18px;flex-shrink:0;}
+        .sidebar-item.hidden{display:none!important;}
+        .sidebar-divider{border:none;border-top:1px solid var(--g200);margin:16px 0;}
+        .content{flex:1;padding:36px 40px;max-width:960px;}
+        .content-header{margin-bottom:28px;}
+        .content-header h1{font-family:'Playfair Display',serif;font-size:1.7rem;color:var(--blue);margin-bottom:4px;}
+        .content-header p{color:var(--g500);font-size:0.9rem;}
 
-        /* ── SIDEBAR ── */
-        .sidebar {
-            width: 240px; background: var(--white); border-right: 1px solid var(--g200);
-            padding: 28px 16px; flex-shrink: 0;
-            min-height: calc(100vh - 68px);
-        }
-        .sidebar-label { font-size: 0.7rem; font-weight: 700; color: var(--g500); text-transform: uppercase; letter-spacing: 0.1em; padding: 0 12px; margin-bottom: 8px; }
-        .sidebar-item {
-            display: flex; align-items: center; gap: 10px; padding: 11px 12px;
-            border-radius: 10px; cursor: pointer; font-size: 0.9rem; font-weight: 500;
-            color: var(--g700); transition: all 0.15s; margin-bottom: 2px; border: none;
-            background: none; width: 100%; text-align: left; font-family: inherit;
-        }
-        .sidebar-item:hover { background: var(--g100); color: var(--blue); }
-        .sidebar-item.active { background: rgba(10,35,66,0.07); color: var(--blue); font-weight: 600; }
-        .sidebar-item svg { width: 18px; height: 18px; flex-shrink: 0; }
-        .sidebar-divider { border: none; border-top: 1px solid var(--g200); margin: 16px 0; }
+        /* STATS */
+        .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin-bottom:32px;}
+        .stat-card{background:var(--white);border-radius:var(--radius);padding:20px 24px;box-shadow:var(--shadow);border-left:4px solid var(--gold);}
+        .stat-card.blue{border-left-color:var(--blue);}
+        .stat-card.burg{border-left-color:var(--burg);}
+        .stat-num{font-size:2rem;font-weight:700;color:var(--blue);line-height:1;}
+        .stat-label{font-size:0.8rem;color:var(--g500);margin-top:4px;text-transform:uppercase;letter-spacing:0.05em;}
 
-        /* ── CONTENT AREA ── */
-        .content { flex: 1; padding: 36px 40px; max-width: 900px; }
-        .content-header { margin-bottom: 28px; }
-        .content-header h1 { font-family: 'Playfair Display', serif; font-size: 1.7rem; color: var(--blue); margin-bottom: 4px; }
-        .content-header p { color: var(--g500); font-size: 0.9rem; }
+        /* FORM */
+        .form-panel{background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden;}
+        .form-panel-header{background:linear-gradient(135deg,var(--blue) 0%,var(--blue-l) 100%);padding:20px 28px;display:flex;align-items:center;gap:12px;}
+        .form-panel-header h2{color:var(--white);font-size:1.1rem;font-weight:600;}
+        .form-panel-header svg{color:var(--gold);width:22px;height:22px;}
+        .form-body{padding:28px;}
+        .field{margin-bottom:20px;}
+        .field label{display:block;font-size:0.8rem;font-weight:600;color:var(--g700);margin-bottom:7px;text-transform:uppercase;letter-spacing:0.05em;}
+        .field label span{color:var(--burg);}
+        .field input,.field select,.field textarea{width:100%;padding:11px 15px;border:1.5px solid var(--g200);border-radius:10px;font-size:0.92rem;font-family:inherit;color:var(--g900);outline:none;transition:border-color 0.2s;background:var(--white);}
+        .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--gold);}
+        .field textarea{resize:vertical;min-height:120px;}
+        .field-row{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+        .rich-toolbar{display:flex;gap:4px;flex-wrap:wrap;background:var(--g100);border:1.5px solid var(--g200);border-bottom:none;border-radius:10px 10px 0 0;padding:8px 10px;}
+        .rich-btn{padding:5px 10px;background:var(--white);border:1px solid var(--g200);border-radius:6px;cursor:pointer;font-size:0.8rem;font-family:inherit;color:var(--g700);transition:all 0.15s;}
+        .rich-btn:hover{background:var(--blue);color:var(--white);border-color:var(--blue);}
+        .rich-area{border-radius:0 0 10px 10px!important;border-top:none!important;min-height:200px;}
+        .file-drop{border:2px dashed var(--g300);border-radius:10px;padding:28px;text-align:center;cursor:pointer;transition:all 0.2s;background:var(--g50);}
+        .file-drop:hover,.file-drop.dragover{border-color:var(--gold);background:#fffbea;}
+        .file-drop svg{width:36px;height:36px;color:var(--g500);margin-bottom:10px;}
+        .file-drop p{font-size:0.88rem;color:var(--g500);}
+        .file-drop strong{color:var(--blue);}
+        .file-drop input[type="file"]{display:none;}
+        .file-selected{font-size:0.85rem;color:var(--green);margin-top:8px;font-weight:500;display:none;}
+        .form-actions{display:flex;gap:12px;padding:20px 28px;border-top:1px solid var(--g200);background:var(--g50);}
+        .btn-primary{padding:12px 28px;background:linear-gradient(135deg,var(--gold) 0%,var(--gold-d) 100%);color:var(--blue);font-weight:700;border:none;border-radius:10px;cursor:pointer;font-size:0.92rem;font-family:inherit;transition:opacity 0.2s;display:flex;align-items:center;gap:8px;}
+        .btn-primary:hover{opacity:0.9;}
+        .btn-primary:disabled{opacity:0.5;cursor:not-allowed;}
+        .btn-secondary{padding:12px 24px;background:var(--white);color:var(--g700);border:1.5px solid var(--g200);border-radius:10px;cursor:pointer;font-size:0.92rem;font-family:inherit;transition:all 0.2s;}
+        .btn-secondary:hover{border-color:var(--g500);}
 
-        /* ── CARDS STATS ── */
-        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-bottom: 32px; }
-        .stat-card {
-            background: var(--white); border-radius: var(--radius); padding: 20px 24px;
-            box-shadow: var(--shadow); border-left: 4px solid var(--gold);
-        }
-        .stat-card.blue { border-left-color: var(--blue); }
-        .stat-card.burg { border-left-color: var(--burg); }
-        .stat-num { font-size: 2rem; font-weight: 700; color: var(--blue); line-height: 1; }
-        .stat-label { font-size: 0.8rem; color: var(--g500); margin-top: 4px; text-transform: uppercase; letter-spacing: 0.05em; }
+        /* LIST */
+        .items-list{display:flex;flex-direction:column;gap:12px;}
+        .list-item{background:var(--white);border-radius:var(--radius);padding:16px 20px;box-shadow:var(--shadow);display:flex;align-items:center;justify-content:space-between;gap:16px;}
+        .list-item-info{flex:1;min-width:0;}
+        .list-item-info h4{font-size:0.95rem;color:var(--blue);margin-bottom:4px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;}
+        .list-item-info p{font-size:0.8rem;color:var(--g500);}
+        .list-item-actions{display:flex;gap:8px;flex-shrink:0;}
+        .btn-icon{padding:7px 12px;border-radius:8px;cursor:pointer;font-size:0.8rem;font-family:inherit;border:1.5px solid var(--g200);background:var(--white);color:var(--g700);transition:all 0.15s;display:flex;align-items:center;gap:5px;font-weight:500;}
+        .btn-icon:hover{border-color:var(--blue);color:var(--blue);}
+        .btn-icon.danger:hover{border-color:var(--red);color:var(--red);background:var(--red-l);}
+        .list-item-badge{font-size:0.72rem;font-weight:600;padding:3px 10px;border-radius:20px;text-transform:uppercase;letter-spacing:0.05em;flex-shrink:0;}
+        .badge-comunicados{background:rgba(107,28,42,0.1);color:var(--burg);}
+        .badge-prensa{background:rgba(10,35,66,0.1);color:var(--blue);}
+        .badge-eventos{background:rgba(212,175,55,0.15);color:var(--gold-d);}
+        .badge-cepoe{background:rgba(26,122,74,0.1);color:var(--green);}
+        .badge-DI{background:rgba(212,175,55,0.15);color:var(--gold-d);}
+        .badge-DAE{background:rgba(10,35,66,0.1);color:var(--blue);}
+        .badge-DO{background:rgba(107,28,42,0.1);color:var(--burg);}
+        .list-empty{text-align:center;padding:48px;color:var(--g500);font-size:0.9rem;}
 
-        /* ── FORM PANEL ── */
-        .form-panel {
-            background: var(--white); border-radius: var(--radius);
-            box-shadow: var(--shadow); overflow: hidden;
-        }
-        .form-panel-header {
-            background: linear-gradient(135deg, var(--blue) 0%, var(--blue-l) 100%);
-            padding: 20px 28px; display: flex; align-items: center; gap: 12px;
-        }
-        .form-panel-header h2 { color: var(--white); font-size: 1.1rem; font-weight: 600; }
-        .form-panel-header svg { color: var(--gold); width: 22px; height: 22px; }
-        .form-body { padding: 28px; }
+        /* MODAL */
+        .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:1000;display:none;align-items:center;justify-content:center;padding:24px;}
+        .modal-overlay.show{display:flex;}
+        .modal{background:var(--white);border-radius:16px;width:100%;max-width:620px;max-height:90vh;overflow-y:auto;box-shadow:0 24px 80px rgba(0,0,0,0.25);}
+        .modal-header{background:linear-gradient(135deg,var(--blue) 0%,var(--blue-l) 100%);padding:20px 28px;display:flex;align-items:center;justify-content:space-between;}
+        .modal-header h3{color:var(--white);font-size:1rem;font-weight:600;}
+        .modal-close{background:none;border:none;color:rgba(255,255,255,0.7);cursor:pointer;font-size:1.4rem;line-height:1;padding:0;}
+        .modal-close:hover{color:var(--white);}
+        .modal-body{padding:28px;}
+        .modal-actions{display:flex;gap:12px;padding:20px 28px;border-top:1px solid var(--g200);background:var(--g50);}
 
-        .field { margin-bottom: 20px; }
-        .field label { display: block; font-size: 0.8rem; font-weight: 600; color: var(--g700); margin-bottom: 7px; text-transform: uppercase; letter-spacing: 0.05em; }
-        .field label span { color: var(--burg); }
-        .field input, .field select, .field textarea {
-            width: 100%; padding: 11px 15px; border: 1.5px solid var(--g200);
-            border-radius: 10px; font-size: 0.92rem; font-family: inherit;
-            color: var(--g900); outline: none; transition: border-color 0.2s;
-            background: var(--white);
-        }
-        .field input:focus, .field select:focus, .field textarea:focus { border-color: var(--gold); }
-        .field textarea { resize: vertical; min-height: 120px; }
-        .field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        /* CONFIRM */
+        .confirm-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:2000;display:none;align-items:center;justify-content:center;padding:24px;}
+        .confirm-overlay.show{display:flex;}
+        .confirm-box{background:var(--white);border-radius:16px;padding:32px;max-width:400px;width:100%;text-align:center;box-shadow:0 24px 80px rgba(0,0,0,0.25);}
+        .confirm-box h3{color:var(--blue);margin-bottom:12px;}
+        .confirm-box p{color:var(--g500);font-size:0.9rem;margin-bottom:24px;}
+        .confirm-actions{display:flex;gap:12px;justify-content:center;}
+        .btn-danger{padding:12px 24px;background:var(--red-l);color:var(--red);border:1.5px solid var(--red);border-radius:10px;cursor:pointer;font-size:0.92rem;font-family:inherit;transition:all 0.2s;}
+        .btn-danger:hover{background:var(--red);color:var(--white);}
 
-        /* Rich text toolbar */
-        .rich-toolbar {
-            display: flex; gap: 4px; flex-wrap: wrap;
-            background: var(--g100); border: 1.5px solid var(--g200);
-            border-bottom: none; border-radius: 10px 10px 0 0; padding: 8px 10px;
-        }
-        .rich-btn {
-            padding: 5px 10px; background: var(--white); border: 1px solid var(--g200);
-            border-radius: 6px; cursor: pointer; font-size: 0.8rem; font-family: inherit;
-            color: var(--g700); transition: all 0.15s;
-        }
-        .rich-btn:hover { background: var(--blue); color: var(--white); border-color: var(--blue); }
-        .rich-area {
-            border-radius: 0 0 10px 10px !important;
-            border-top: none !important;
-            min-height: 200px;
-        }
+        /* USERS */
+        .users-grid{display:grid;gap:12px;}
+        .user-card{background:var(--white);border-radius:var(--radius);padding:16px 20px;box-shadow:var(--shadow);display:flex;align-items:center;justify-content:space-between;gap:16px;}
+        .user-info h4{font-size:0.95rem;color:var(--blue);margin-bottom:2px;}
+        .user-info p{font-size:0.8rem;color:var(--g500);}
 
-        /* File upload */
-        .file-drop {
-            border: 2px dashed var(--g300); border-radius: 10px; padding: 28px;
-            text-align: center; cursor: pointer; transition: all 0.2s; background: var(--g50);
-        }
-        .file-drop:hover, .file-drop.dragover { border-color: var(--gold); background: #fffbea; }
-        .file-drop svg { width: 36px; height: 36px; color: var(--g500); margin-bottom: 10px; }
-        .file-drop p { font-size: 0.88rem; color: var(--g500); }
-        .file-drop strong { color: var(--blue); }
-        .file-drop input[type="file"] { display: none; }
-        .file-selected { font-size: 0.85rem; color: var(--green); margin-top: 8px; font-weight: 500; display: none; }
-
-        /* Actions */
-        .form-actions { display: flex; gap: 12px; padding: 20px 28px; border-top: 1px solid var(--g200); background: var(--g50); }
-        .btn-primary {
-            padding: 12px 28px; background: linear-gradient(135deg, var(--gold) 0%, var(--gold-d) 100%);
-            color: var(--blue); font-weight: 700; border: none; border-radius: 10px;
-            cursor: pointer; font-size: 0.92rem; font-family: inherit; transition: opacity 0.2s;
-            display: flex; align-items: center; gap: 8px;
-        }
-        .btn-primary:hover { opacity: 0.9; }
-        .btn-primary:disabled { opacity: 0.5; cursor: not-allowed; }
-        .btn-secondary {
-            padding: 12px 24px; background: var(--white); color: var(--g700);
-            border: 1.5px solid var(--g200); border-radius: 10px; cursor: pointer;
-            font-size: 0.92rem; font-family: inherit; transition: all 0.2s;
-        }
-        .btn-secondary:hover { border-color: var(--g500); }
-
-        /* Toast */
-        .toast {
-            position: fixed; bottom: 32px; right: 32px; z-index: 9999;
-            background: var(--blue); color: var(--white); padding: 14px 22px;
-            border-radius: 12px; font-size: 0.9rem; font-weight: 500;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.2); display: none;
-            align-items: center; gap: 10px; max-width: 360px;
-        }
-        .toast.success { background: var(--green); }
-        .toast.error { background: var(--red); }
-        .toast.show { display: flex; animation: slideIn 0.3s ease; }
-        @keyframes slideIn { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
-
-        /* List view */
-        .items-list { display: flex; flex-direction: column; gap: 12px; }
-        .list-item {
-            background: var(--white); border-radius: var(--radius); padding: 16px 20px;
-            box-shadow: var(--shadow); display: flex; align-items: center;
-            justify-content: space-between; gap: 16px;
-        }
-        .list-item-info h4 { font-size: 0.95rem; color: var(--blue); margin-bottom: 4px; }
-        .list-item-info p { font-size: 0.8rem; color: var(--g500); }
-        .list-item-badge {
-            font-size: 0.72rem; font-weight: 600; padding: 3px 10px; border-radius: 20px;
-            text-transform: uppercase; letter-spacing: 0.05em;
-        }
-        .badge-comunicados { background: rgba(107,28,42,0.1); color: var(--burg); }
-        .badge-prensa      { background: rgba(10,35,66,0.1);  color: var(--blue); }
-        .badge-eventos     { background: rgba(212,175,55,0.15); color: var(--gold-d); }
-        .badge-cepoe       { background: rgba(26,122,74,0.1); color: var(--green); }
-        .badge-DI  { background: rgba(212,175,55,0.15); color: var(--gold-d); }
-        .badge-DAE { background: rgba(10,35,66,0.1);  color: var(--blue); }
-        .badge-DO  { background: rgba(107,28,42,0.1); color: var(--burg); }
-        .list-empty { text-align: center; padding: 48px; color: var(--g500); font-size: 0.9rem; }
-
-        .page-hidden { display: none !important; }
-
-        /* Spinner */
-        .spinner { width: 18px; height: 18px; border: 2px solid rgba(255,255,255,0.3); border-top-color: var(--blue); border-radius: 50%; animation: spin 0.6s linear infinite; }
-        @keyframes spin { to { transform: rotate(360deg); } }
-
-        @media (max-width: 768px) {
-            .sidebar { display: none; }
-            .content { padding: 24px 16px; }
-            .field-row { grid-template-columns: 1fr; }
-            .topbar { padding: 0 16px; }
-        }
+        /* TOAST */
+        .toast{position:fixed;bottom:32px;right:32px;z-index:9999;background:var(--blue);color:var(--white);padding:14px 22px;border-radius:12px;font-size:0.9rem;font-weight:500;box-shadow:0 8px 32px rgba(0,0,0,0.2);display:none;align-items:center;gap:10px;max-width:360px;}
+        .toast.success{background:var(--green);}
+        .toast.error{background:var(--red);}
+        .toast.show{display:flex;animation:slideIn 0.3s ease;}
+        @keyframes slideIn{from{transform:translateY(20px);opacity:0}to{transform:translateY(0);opacity:1}}
+        .spinner{width:18px;height:18px;border:2px solid rgba(255,255,255,0.3);border-top-color:var(--blue);border-radius:50%;animation:spin 0.6s linear infinite;}
+        @keyframes spin{to{transform:rotate(360deg)}}
+        .page-hidden{display:none!important;}
+        @media(max-width:768px){.sidebar{display:none;}.content{padding:24px 16px;}.field-row{grid-template-columns:1fr;}.topbar{padding:0 16px;}}
     </style>
 </head>
 <body>
 
-<!-- ══ LOGIN ══ -->
+<!-- LOGIN -->
 <div class="login-wrap" id="loginWrap">
-    <div class="login-card">
+    <div class="login-card" id="stepCredentials">
         <img src="logo.png" alt="CGREN" class="login-logo">
         <h1 class="login-title">Panel CGREN</h1>
         <p class="login-sub">Gestión de Contenidos</p>
@@ -284,11 +180,25 @@
         <input type="password" id="loginPass" placeholder="••••••••" autocomplete="current-password">
         <button class="btn-login" onclick="doLogin()">Ingresar</button>
     </div>
+
+    <div class="login-card page-hidden" id="stepToken">
+        <img src="logo.png" alt="CGREN" class="login-logo">
+        <h1 class="login-title">Token de GitHub</h1>
+        <p class="login-sub">Solo se pide una vez</p>
+        <div class="token-note">
+            Este token conecta el panel con GitHub. Solo se guarda en tu navegador y desaparece al cerrar la ventana. Nunca lo compartas por correo o chat.<br><br>
+            Para generarlo: <strong>GitHub → Settings → Developer settings → Personal access tokens → Tokens (classic) → New token → marcar "repo" → Generate</strong>
+        </div>
+        <div class="login-error" id="tokenError">Token inválido. Verifica que tenga el permiso "repo".</div>
+        <label for="tokenInput">Token de GitHub</label>
+        <input type="password" id="tokenInput" placeholder="ghp_...">
+        <button class="btn-login" onclick="doToken()">Conectar</button>
+        <button style="width:100%;margin-top:8px;padding:10px;background:none;border:none;color:var(--g500);cursor:pointer;font-family:inherit;font-size:0.85rem;" onclick="backToLogin()">← Volver</button>
+    </div>
 </div>
 
-<!-- ══ APP ══ -->
+<!-- APP -->
 <div id="app">
-    <!-- Top Bar -->
     <div class="topbar">
         <div class="topbar-brand">
             <img src="logo.png" alt="CGREN">
@@ -299,12 +209,12 @@
         </div>
         <div class="topbar-right">
             <span class="topbar-user" id="topbarUser"></span>
+            <span class="topbar-role" id="topbarRole"></span>
             <button class="btn-logout" onclick="doLogout()">Cerrar sesión</button>
         </div>
     </div>
 
     <div class="app-body">
-        <!-- Sidebar -->
         <aside class="sidebar">
             <div class="sidebar-label">Contenido</div>
             <button class="sidebar-item active" id="nav-inicio" onclick="showPage('inicio')">
@@ -315,9 +225,9 @@
                 <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
                 Nueva Noticia
             </button>
-            <button class="sidebar-item" id="nav-noticias" onclick="showPage('noticias'); loadItems('noticias')">
+            <button class="sidebar-item" id="nav-noticias" onclick="showPage('noticias');loadItems('noticias')">
                 <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/></svg>
-                Ver Noticias
+                Noticias
             </button>
             <hr class="sidebar-divider">
             <div class="sidebar-label">CEPOE</div>
@@ -325,9 +235,15 @@
                 <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
                 Subir Documento
             </button>
-            <button class="sidebar-item" id="nav-documentos" onclick="showPage('documentos'); loadItems('documentos')">
+            <button class="sidebar-item" id="nav-documentos" onclick="showPage('documentos');loadItems('documentos')">
                 <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
-                Ver Documentos
+                Documentos
+            </button>
+            <hr class="sidebar-divider" id="div-admin">
+            <div class="sidebar-label" id="lbl-admin">Administración</div>
+            <button class="sidebar-item" id="nav-usuarios" onclick="showPage('usuarios');renderUsers()">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                Usuarios
             </button>
             <hr class="sidebar-divider">
             <button class="sidebar-item" onclick="window.open('index.html','_blank')">
@@ -336,79 +252,41 @@
             </button>
         </aside>
 
-        <!-- Pages -->
         <main class="content">
-
-            <!-- ── INICIO ── -->
+            <!-- INICIO -->
             <div id="page-inicio">
                 <div class="content-header">
-                    <h1>Bienvenido al Panel CGREN</h1>
-                    <p>Desde aquí puedes gestionar las noticias y documentos del sitio web.</p>
+                    <h1>Bienvenido, <span id="welcomeName"></span></h1>
+                    <p id="welcomeDesc"></p>
                 </div>
                 <div class="stats-grid">
-                    <div class="stat-card">
-                        <div class="stat-num" id="statNoticias">—</div>
-                        <div class="stat-label">Noticias publicadas</div>
-                    </div>
-                    <div class="stat-card blue">
-                        <div class="stat-num" id="statDocs">—</div>
-                        <div class="stat-label">Documentos CEPOE</div>
-                    </div>
-                    <div class="stat-card burg">
-                        <div class="stat-num" id="statUser">—</div>
-                        <div class="stat-label">Usuario activo</div>
-                    </div>
+                    <div class="stat-card"><div class="stat-num" id="statNoticias">—</div><div class="stat-label">Noticias publicadas</div></div>
+                    <div class="stat-card blue"><div class="stat-num" id="statDocs">—</div><div class="stat-label">Documentos CEPOE</div></div>
+                    <div class="stat-card burg"><div class="stat-num" id="statUsers">—</div><div class="stat-label">Usuarios activos</div></div>
                 </div>
-                <div style="background:var(--white); border-radius:var(--radius); padding:24px 28px; box-shadow:var(--shadow);">
-                    <h3 style="color:var(--blue); margin-bottom:16px; font-size:1rem;">Accesos rápidos</h3>
-                    <div style="display:flex; gap:12px; flex-wrap:wrap;">
-                        <button class="btn-primary" onclick="showPage('nueva-noticia')">
-                            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
-                            Nueva Noticia
-                        </button>
-                        <button class="btn-primary" onclick="showPage('nuevo-doc')">
-                            <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
-                            Subir Documento CEPOE
-                        </button>
-                    </div>
+                <div style="background:var(--white);border-radius:var(--radius);padding:24px 28px;box-shadow:var(--shadow);">
+                    <h3 style="color:var(--blue);margin-bottom:16px;font-size:1rem;">Accesos rápidos</h3>
+                    <div style="display:flex;gap:12px;flex-wrap:wrap;" id="quickActions"></div>
                 </div>
             </div>
 
-            <!-- ── NUEVA NOTICIA ── -->
+            <!-- NUEVA NOTICIA -->
             <div id="page-nueva-noticia" class="page-hidden">
-                <div class="content-header">
-                    <h1>Nueva Noticia</h1>
-                    <p>Completa los campos y publica directamente en el sitio web.</p>
-                </div>
+                <div class="content-header"><h1>Nueva Noticia</h1><p>Completa los campos y publica directamente en el sitio web.</p></div>
                 <div class="form-panel">
                     <div class="form-panel-header">
                         <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/></svg>
                         <h2>Información de la Noticia</h2>
                     </div>
                     <div class="form-body">
-                        <div class="field">
-                            <label>Título <span>*</span></label>
-                            <input type="text" id="n-title" placeholder="Ej: Comunicado a la Opinión Pública sobre...">
-                        </div>
+                        <div class="field"><label>Título <span>*</span></label><input type="text" id="n-title" placeholder="Ej: Comunicado a la Opinión Pública..."></div>
                         <div class="field-row">
-                            <div class="field">
-                                <label>Categoría <span>*</span></label>
-                                <select id="n-cat">
-                                    <option value="comunicados">Comunicados Oficiales</option>
-                                    <option value="prensa">Prensa</option>
-                                    <option value="eventos">Eventos</option>
-                                    <option value="cepoe">CEPOE</option>
-                                </select>
+                            <div class="field"><label>Categoría <span>*</span></label>
+                                <select id="n-cat"><option value="comunicados">Comunicados Oficiales</option><option value="prensa">Prensa</option><option value="eventos">Eventos</option><option value="cepoe">CEPOE</option></select>
                             </div>
-                            <div class="field">
-                                <label>Fecha <span>*</span></label>
-                                <input type="date" id="n-date">
-                            </div>
+                            <div class="field"><label>Fecha <span>*</span></label><input type="date" id="n-date"></div>
                         </div>
-                        <div class="field">
-                            <label>Resumen <span>*</span></label>
-                            <textarea id="n-excerpt" rows="3" placeholder="Breve descripción que aparece en la lista de noticias (2-3 líneas)..."></textarea>
-                        </div>
+                        <div class="field"><label>Resumen <span>*</span></label><textarea id="n-excerpt" rows="3" placeholder="Breve descripción (2-3 líneas)..."></textarea></div>
                         <div class="field">
                             <label>Contenido completo</label>
                             <div class="rich-toolbar">
@@ -420,82 +298,57 @@
                                 <button class="rich-btn" onclick="insertMD('\n> ','')">Cita</button>
                                 <button class="rich-btn" onclick="insertMD('\n---\n','')">— Línea</button>
                             </div>
-                            <textarea id="n-body" class="rich-area" rows="12" placeholder="Escribe el contenido completo aquí. Puedes usar los botones de arriba para dar formato..."></textarea>
+                            <textarea id="n-body" class="rich-area" rows="12" placeholder="Escribe el contenido completo aquí..."></textarea>
                         </div>
-                        <div class="field">
-                            <label>Enlace externo (opcional)</label>
-                            <input type="url" id="n-link" placeholder="https://... (si la noticia tiene un enlace externo)">
-                        </div>
+                        <div class="field"><label>Enlace externo (opcional)</label><input type="url" id="n-link" placeholder="https://..."></div>
                     </div>
                     <div class="form-actions">
                         <button class="btn-primary" id="btnPublishNoticia" onclick="publishNoticia()">
                             <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                            Publicar Noticia
+                            <span id="btnNoticiaLabel">Publicar Noticia</span>
                         </button>
                         <button class="btn-secondary" onclick="clearNoticiaForm()">Limpiar</button>
                     </div>
                 </div>
             </div>
 
-            <!-- ── VER NOTICIAS ── -->
+            <!-- NOTICIAS LIST -->
             <div id="page-noticias" class="page-hidden">
-                <div class="content-header">
-                    <h1>Noticias Publicadas</h1>
-                    <p>Listado de todas las noticias en el sitio web.</p>
+                <div class="content-header" style="display:flex;align-items:center;justify-content:space-between;">
+                    <div><h1>Noticias Publicadas</h1><p>Gestiona las noticias del sitio web.</p></div>
+                    <button class="btn-primary" onclick="showPage('nueva-noticia')">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>Nueva
+                    </button>
                 </div>
-                <div id="list-noticias" class="items-list">
-                    <div class="list-empty">Cargando...</div>
-                </div>
+                <div id="list-noticias" class="items-list"><div class="list-empty">Cargando...</div></div>
             </div>
 
-            <!-- ── NUEVO DOCUMENTO ── -->
+            <!-- NUEVO DOC -->
             <div id="page-nuevo-doc" class="page-hidden">
-                <div class="content-header">
-                    <h1>Subir Documento CEPOE</h1>
-                    <p>Sube un documento al repositorio académico del CEPOE.</p>
-                </div>
+                <div class="content-header"><h1>Subir Documento CEPOE</h1><p>Sube un documento al repositorio académico.</p></div>
                 <div class="form-panel">
                     <div class="form-panel-header">
                         <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
                         <h2>Información del Documento</h2>
                     </div>
                     <div class="form-body">
-                        <div class="field">
-                            <label>Título <span>*</span></label>
-                            <input type="text" id="d-title" placeholder="Ej: Análisis de la situación de seguridad...">
-                        </div>
+                        <div class="field"><label>Título <span>*</span></label><input type="text" id="d-title" placeholder="Ej: Análisis de la situación de seguridad..."></div>
                         <div class="field-row">
-                            <div class="field">
-                                <label>Tipo <span>*</span></label>
-                                <select id="d-type">
-                                    <option value="DI">DI — Documento de Investigación</option>
-                                    <option value="DAE">DAE — Documento de Análisis Estratégico</option>
-                                    <option value="DO">DO — Documento de Opinión</option>
-                                </select>
+                            <div class="field"><label>Tipo <span>*</span></label>
+                                <select id="d-type"><option value="DI">DI — Documento de Investigación</option><option value="DAE">DAE — Análisis Estratégico</option><option value="DO">DO — Documento de Opinión</option></select>
                             </div>
-                            <div class="field">
-                                <label>Línea de Investigación <span>*</span></label>
-                                <select id="d-line">
-                                    <option value="juridica">Defensa Jurídica Institucional</option>
-                                    <option value="seguridad">Seguridad y Defensa Nacional</option>
-                                    <option value="historia">Legado Histórico</option>
-                                </select>
+                            <div class="field"><label>Línea <span>*</span></label>
+                                <select id="d-line"><option value="juridica">Defensa Jurídica</option><option value="seguridad">Seguridad y Defensa</option><option value="historia">Legado Histórico</option></select>
                             </div>
                         </div>
-                        <div class="field">
-                            <label>Fecha <span>*</span></label>
-                            <input type="date" id="d-date">
-                        </div>
-                        <div class="field">
-                            <label>Descripción <span>*</span></label>
-                            <textarea id="d-excerpt" rows="3" placeholder="Breve descripción del documento..."></textarea>
-                        </div>
+                        <div class="field"><label>Fecha <span>*</span></label><input type="date" id="d-date"></div>
+                        <div class="field"><label>Descripción <span>*</span></label><textarea id="d-excerpt" rows="3" placeholder="Breve descripción del documento..."></textarea></div>
                         <div class="field">
                             <label>Archivo PDF <span>*</span></label>
                             <div class="file-drop" id="fileDrop" onclick="document.getElementById('d-file').click()" ondragover="dragOver(event)" ondragleave="dragLeave(event)" ondrop="dropFile(event)">
                                 <svg fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"/></svg>
                                 <p><strong>Haz clic o arrastra el PDF aquí</strong></p>
-                                <p>Solo archivos PDF</p>
+                                <p id="dropSubtext">Solo archivos PDF</p>
                                 <input type="file" id="d-file" accept=".pdf" onchange="fileSelected(this)">
                             </div>
                             <div class="file-selected" id="fileSelectedMsg">✓ Archivo seleccionado</div>
@@ -504,404 +357,535 @@
                     <div class="form-actions">
                         <button class="btn-primary" id="btnPublishDoc" onclick="publishDoc()">
                             <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
-                            Subir y Publicar
+                            <span id="btnDocLabel">Subir y Publicar</span>
                         </button>
                         <button class="btn-secondary" onclick="clearDocForm()">Limpiar</button>
                     </div>
                 </div>
             </div>
 
-            <!-- ── VER DOCUMENTOS ── -->
+            <!-- DOCUMENTOS LIST -->
             <div id="page-documentos" class="page-hidden">
-                <div class="content-header">
-                    <h1>Documentos CEPOE</h1>
-                    <p>Repositorio académico del Centro de Pensamiento Estratégico.</p>
+                <div class="content-header" style="display:flex;align-items:center;justify-content:space-between;">
+                    <div><h1>Documentos CEPOE</h1><p>Repositorio académico del Centro de Pensamiento Estratégico.</p></div>
+                    <button class="btn-primary" onclick="showPage('nuevo-doc')">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>Subir
+                    </button>
                 </div>
-                <div id="list-documentos" class="items-list">
-                    <div class="list-empty">Cargando...</div>
-                </div>
+                <div id="list-documentos" class="items-list"><div class="list-empty">Cargando...</div></div>
             </div>
 
+            <!-- USUARIOS -->
+            <div id="page-usuarios" class="page-hidden">
+                <div class="content-header" style="display:flex;align-items:center;justify-content:space-between;">
+                    <div><h1>Gestión de Usuarios</h1><p>Administra quién tiene acceso al panel.</p></div>
+                    <button class="btn-primary" onclick="openUserModal()">
+                        <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>Nuevo Usuario
+                    </button>
+                </div>
+                <div class="users-grid" id="usersList"></div>
+            </div>
         </main>
     </div>
 </div>
 
-<!-- Toast -->
+<!-- MODAL EDITAR NOTICIA -->
+<div class="modal-overlay" id="modalNoticia">
+    <div class="modal">
+        <div class="modal-header"><h3>Editar Noticia</h3><button class="modal-close" onclick="closeModal('modalNoticia')">&times;</button></div>
+        <div class="modal-body">
+            <div class="field"><label>Título</label><input type="text" id="m-n-title"></div>
+            <div class="field-row">
+                <div class="field"><label>Categoría</label><select id="m-n-cat"><option value="comunicados">Comunicados Oficiales</option><option value="prensa">Prensa</option><option value="eventos">Eventos</option><option value="cepoe">CEPOE</option></select></div>
+                <div class="field"><label>Fecha</label><input type="date" id="m-n-date"></div>
+            </div>
+            <div class="field"><label>Resumen</label><textarea id="m-n-excerpt" rows="3"></textarea></div>
+            <div class="field"><label>Contenido</label><textarea id="m-n-body" rows="10"></textarea></div>
+            <div class="field"><label>Enlace externo</label><input type="url" id="m-n-link"></div>
+            <input type="hidden" id="m-n-slug"><input type="hidden" id="m-n-sha">
+        </div>
+        <div class="modal-actions">
+            <button class="btn-primary" id="btnSaveNoticia" onclick="saveEditNoticia()">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Guardar Cambios
+            </button>
+            <button class="btn-secondary" onclick="closeModal('modalNoticia')">Cancelar</button>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL EDITAR DOC -->
+<div class="modal-overlay" id="modalDoc">
+    <div class="modal">
+        <div class="modal-header"><h3>Editar Documento</h3><button class="modal-close" onclick="closeModal('modalDoc')">&times;</button></div>
+        <div class="modal-body">
+            <div class="field"><label>Título</label><input type="text" id="m-d-title"></div>
+            <div class="field-row">
+                <div class="field"><label>Tipo</label><select id="m-d-type"><option value="DI">DI — Investigación</option><option value="DAE">DAE — Análisis Estratégico</option><option value="DO">DO — Opinión</option></select></div>
+                <div class="field"><label>Línea</label><select id="m-d-line"><option value="juridica">Defensa Jurídica</option><option value="seguridad">Seguridad y Defensa</option><option value="historia">Legado Histórico</option></select></div>
+            </div>
+            <div class="field"><label>Fecha</label><input type="date" id="m-d-date"></div>
+            <div class="field"><label>Descripción</label><textarea id="m-d-excerpt" rows="3"></textarea></div>
+            <input type="hidden" id="m-d-slug"><input type="hidden" id="m-d-sha"><input type="hidden" id="m-d-pdf">
+        </div>
+        <div class="modal-actions">
+            <button class="btn-primary" id="btnSaveDoc" onclick="saveEditDoc()">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Guardar Cambios
+            </button>
+            <button class="btn-secondary" onclick="closeModal('modalDoc')">Cancelar</button>
+        </div>
+    </div>
+</div>
+
+<!-- MODAL USUARIO -->
+<div class="modal-overlay" id="modalUser">
+    <div class="modal">
+        <div class="modal-header"><h3 id="modalUserTitle">Nuevo Usuario</h3><button class="modal-close" onclick="closeModal('modalUser')">&times;</button></div>
+        <div class="modal-body">
+            <div class="field"><label>Usuario <span>*</span></label><input type="text" id="u-username" placeholder="ej: paula"></div>
+            <div class="field"><label>Contraseña <span>*</span></label><input type="password" id="u-password" placeholder="mínimo 6 caracteres"></div>
+            <div class="field"><label>Rol <span>*</span></label>
+                <select id="u-role">
+                    <option value="noticiero">Noticiero — solo sube y edita noticias</option>
+                    <option value="repositorio">Repositorio — solo sube y edita documentos CEPOE</option>
+                    <option value="admin">Admin — acceso completo</option>
+                </select>
+            </div>
+            <input type="hidden" id="u-editing">
+        </div>
+        <div class="modal-actions">
+            <button class="btn-primary" onclick="saveUser()">
+                <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Guardar
+            </button>
+            <button class="btn-secondary" onclick="closeModal('modalUser')">Cancelar</button>
+        </div>
+    </div>
+</div>
+
+<!-- CONFIRM -->
+<div class="confirm-overlay" id="confirmBox">
+    <div class="confirm-box">
+        <h3 id="confirmTitle">¿Estás seguro?</h3>
+        <p id="confirmMsg">Esta acción no se puede deshacer.</p>
+        <div class="confirm-actions">
+            <button class="btn-danger" id="confirmOk">Sí, eliminar</button>
+            <button class="btn-secondary" onclick="closeConfirm()">Cancelar</button>
+        </div>
+    </div>
+</div>
+
 <div class="toast" id="toast"></div>
 
 <script>
-// ══════════════════════════════════════════════
-// CONFIG — cambia estos valores
-// ══════════════════════════════════════════════
-const REPO  = 'Detshdhd/cgren-website';
+const REPO   = 'Detshdhd/cgren-website';
 const BRANCH = 'main';
-const BASE_PATH = 'CGREN_Website';
+const BASE   = 'CGREN_Website';
 
-// Usuarios del panel (usuario: contraseña)
-// Para cambiar contraseñas, edita este objeto
-const USERS = {
-    'paula':  'cgren2026paula',
-    'admin':  'cgren2026admin'
+// ── PERMISOS ──
+const PERMS = {
+    admin:       { noticias:true,  docs:true,  borrar:true,  usuarios:true  },
+    noticiero:   { noticias:true,  docs:false, borrar:false, usuarios:false },
+    repositorio: { noticias:false, docs:true,  borrar:false, usuarios:false }
 };
 
-// ══════════════════════════════════════════════
-// LOGIN
-// ══════════════════════════════════════════════
+// ── USUARIOS — guardados en localStorage, nunca en el código ──
+const USERS_KEY = 'cgren_users_v2';
+const DEFAULT_USERS = [
+    { username:'admin', password:'cgren2026admin', role:'admin' }
+];
+function getUsers(){ const s=localStorage.getItem(USERS_KEY); return s?JSON.parse(s):DEFAULT_USERS; }
+function saveUsers(u){ localStorage.setItem(USERS_KEY,JSON.stringify(u)); }
+
+// ── TOKEN — guardado en sessionStorage, se borra al cerrar el navegador ──
+let GH_TOKEN = '';
 let currentUser = null;
-let ghToken = null;
+let currentRole = null;
+let perms = {};
 
-// El token de GitHub se guarda en sessionStorage al iniciar sesión
-// Para configurarlo: después del login exitoso, el panel pide el token una sola vez
-// y lo guarda en la sesión (se borra al cerrar el navegador)
-
-function doLogin() {
+// ── LOGIN ──
+function doLogin(){
     const user = document.getElementById('loginUser').value.trim();
     const pass = document.getElementById('loginPass').value;
     const err  = document.getElementById('loginError');
+    const found = getUsers().find(u=>u.username===user && u.password===pass);
+    if(found){
+        currentUser = found.username;
+        currentRole = found.role;
+        perms = PERMS[currentRole]||PERMS.noticiero;
+        err.style.display='none';
+        // ¿Ya hay token en sesión?
+        const saved = sessionStorage.getItem('cgren_gh_token');
+        if(saved){ GH_TOKEN=saved; startApp(); }
+        else { showTokenStep(); }
+    } else {
+        err.style.display='block';
+    }
+}
 
-    if (USERS[user] && USERS[user] === pass) {
-        currentUser = user;
-        // Recupera token de sesión si existe
-        ghToken = sessionStorage.getItem('cgren_gh_token');
-        if (!ghToken) {
-            ghToken = prompt('Primera vez: ingresa el token de GitHub (se guarda solo para esta sesión):');
-            if (ghToken) sessionStorage.setItem('cgren_gh_token', ghToken.trim());
-        }
-        err.style.display = 'none';
+function showTokenStep(){
+    document.getElementById('stepCredentials').classList.add('page-hidden');
+    document.getElementById('stepToken').classList.remove('page-hidden');
+}
+
+function backToLogin(){
+    document.getElementById('stepToken').classList.add('page-hidden');
+    document.getElementById('stepCredentials').classList.remove('page-hidden');
+    document.getElementById('tokenInput').value='';
+    document.getElementById('tokenError').style.display='none';
+}
+
+async function doToken(){
+    const token = document.getElementById('tokenInput').value.trim();
+    const err   = document.getElementById('tokenError');
+    if(!token){ err.style.display='block'; return; }
+    // Valida el token haciendo un ping a la API
+    try {
+        const r = await fetch(`https://api.github.com/repos/${REPO}`,{
+            headers:{'Authorization':`token ${token}`,'Accept':'application/vnd.github.v3+json'}
+        });
+        if(!r.ok) throw new Error('invalid');
+        GH_TOKEN = token;
+        sessionStorage.setItem('cgren_gh_token', token);
+        err.style.display='none';
         startApp();
-    } else {
-        err.style.display = 'block';
+    } catch {
+        err.style.display='block';
     }
 }
 
-function doLogout() {
-    currentUser = null;
-    document.getElementById('app').style.display = 'none';
-    document.getElementById('loginWrap').style.display = 'flex';
-    document.getElementById('loginPass').value = '';
+function doLogout(){
+    currentUser=null; currentRole=null; perms={}; GH_TOKEN='';
+    sessionStorage.removeItem('cgren_gh_token');
+    document.getElementById('app').style.display='none';
+    document.getElementById('loginWrap').style.display='flex';
+    document.getElementById('stepToken').classList.add('page-hidden');
+    document.getElementById('stepCredentials').classList.remove('page-hidden');
+    document.getElementById('loginPass').value='';
+    document.getElementById('tokenInput').value='';
 }
 
-document.getElementById('loginPass').addEventListener('keydown', e => {
-    if (e.key === 'Enter') doLogin();
-});
+document.getElementById('loginPass').addEventListener('keydown',e=>{ if(e.key==='Enter') doLogin(); });
+document.getElementById('tokenInput').addEventListener('keydown',e=>{ if(e.key==='Enter') doToken(); });
 
-function startApp() {
-    document.getElementById('loginWrap').style.display = 'none';
-    document.getElementById('app').style.display = 'flex';
-    document.getElementById('app').style.flexDirection = 'column';
-    document.getElementById('topbarUser').textContent = currentUser;
-    document.getElementById('statUser').textContent = currentUser;
-
-    // Fecha de hoy por defecto
-    const today = new Date().toISOString().split('T')[0];
-    document.getElementById('n-date').value = today;
-    document.getElementById('d-date').value = today;
-
-    loadStats();
+function startApp(){
+    document.getElementById('loginWrap').style.display='none';
+    const app=document.getElementById('app');
+    app.style.display='flex'; app.style.flexDirection='column';
+    document.getElementById('topbarUser').textContent=currentUser;
+    const rl=document.getElementById('topbarRole');
+    const labels={admin:'Admin',noticiero:'Noticiero',repositorio:'Repositorio'};
+    rl.textContent=labels[currentRole]||currentRole;
+    rl.className='topbar-role role-'+currentRole;
+    applyPermissions();
+    const today=new Date().toISOString().split('T')[0];
+    document.getElementById('n-date').value=today;
+    document.getElementById('d-date').value=today;
+    document.getElementById('welcomeName').textContent=currentUser;
+    const descs={admin:'Tienes acceso completo al panel.',noticiero:'Puedes publicar y editar noticias.',repositorio:'Puedes subir y editar documentos CEPOE.'};
+    document.getElementById('welcomeDesc').textContent=descs[currentRole]||'';
+    document.getElementById('statUsers').textContent=getUsers().length;
+    buildQuickActions(); loadStats();
 }
 
-// ══════════════════════════════════════════════
-// NAVEGACIÓN
-// ══════════════════════════════════════════════
-const pages = ['inicio','nueva-noticia','noticias','nuevo-doc','documentos'];
-
-function showPage(name) {
-    pages.forEach(p => {
-        document.getElementById('page-' + p).classList.add('page-hidden');
-        const nav = document.getElementById('nav-' + p);
-        if (nav) nav.classList.remove('active');
-    });
-    document.getElementById('page-' + name).classList.remove('page-hidden');
-    const nav = document.getElementById('nav-' + name);
-    if (nav) nav.classList.add('active');
+function applyPermissions(){
+    if(!perms.noticias){ document.getElementById('nav-nueva-noticia').classList.add('hidden'); document.getElementById('nav-noticias').classList.add('hidden'); }
+    if(!perms.docs){ document.getElementById('nav-nuevo-doc').classList.add('hidden'); document.getElementById('nav-documentos').classList.add('hidden'); }
+    if(!perms.usuarios){ document.getElementById('nav-usuarios').classList.add('hidden'); document.getElementById('div-admin').classList.add('hidden'); document.getElementById('lbl-admin').classList.add('hidden'); }
 }
 
-// ══════════════════════════════════════════════
-// GITHUB API
-// ══════════════════════════════════════════════
-async function ghGet(path) {
-    const r = await fetch(`https://api.github.com/repos/${REPO}/contents/${path}`, {
-        headers: { 'Authorization': `token ${ghToken}`, 'Accept': 'application/vnd.github.v3+json' }
-    });
-    if (!r.ok) throw new Error(await r.text());
-    return r.json();
+function buildQuickActions(){
+    const el=document.getElementById('quickActions'); let html='';
+    if(perms.noticias) html+=`<button class="btn-primary" onclick="showPage('nueva-noticia')"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>Nueva Noticia</button>`;
+    if(perms.docs) html+=`<button class="btn-primary" onclick="showPage('nuevo-doc')"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>Subir Documento</button>`;
+    if(perms.usuarios) html+=`<button class="btn-primary" onclick="showPage('usuarios');renderUsers()"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/></svg>Gestionar Usuarios</button>`;
+    el.innerHTML=html;
 }
 
-async function ghPut(path, content, message, sha) {
-    const body = { message, content: btoa(unescape(encodeURIComponent(content))), branch: BRANCH };
-    if (sha) body.sha = sha;
-    const r = await fetch(`https://api.github.com/repos/${REPO}/contents/${path}`, {
-        method: 'PUT',
-        headers: {
-            'Authorization': `token ${ghToken}`,
-            'Accept': 'application/vnd.github.v3+json',
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(body)
-    });
-    if (!r.ok) throw new Error(await r.text());
-    return r.json();
+// ── NAVEGACIÓN ──
+const pages=['inicio','nueva-noticia','noticias','nuevo-doc','documentos','usuarios'];
+function showPage(name){
+    pages.forEach(p=>{ document.getElementById('page-'+p).classList.add('page-hidden'); const n=document.getElementById('nav-'+p); if(n) n.classList.remove('active'); });
+    document.getElementById('page-'+name).classList.remove('page-hidden');
+    const n=document.getElementById('nav-'+name); if(n) n.classList.add('active');
 }
 
-async function ghPutBinary(path, base64content, message) {
-    const body = { message, content: base64content, branch: BRANCH };
-    const r = await fetch(`https://api.github.com/repos/${REPO}/contents/${path}`, {
-        method: 'PUT',
-        headers: {
-            'Authorization': `token ${ghToken}`,
-            'Accept': 'application/vnd.github.v3+json',
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(body)
-    });
-    if (!r.ok) throw new Error(await r.text());
-    return r.json();
+// ── GITHUB API ──
+async function ghGet(path){
+    const r=await fetch(`https://api.github.com/repos/${REPO}/contents/${path}`,{headers:{'Authorization':`token ${GH_TOKEN}`,'Accept':'application/vnd.github.v3+json'}});
+    if(!r.ok) throw new Error(await r.text()); return r.json();
+}
+async function ghPut(path,content,message,sha){
+    const body={message,content:btoa(unescape(encodeURIComponent(content))),branch:BRANCH};
+    if(sha) body.sha=sha;
+    const r=await fetch(`https://api.github.com/repos/${REPO}/contents/${path}`,{method:'PUT',headers:{'Authorization':`token ${GH_TOKEN}`,'Accept':'application/vnd.github.v3+json','Content-Type':'application/json'},body:JSON.stringify(body)});
+    if(!r.ok) throw new Error(await r.text()); return r.json();
+}
+async function ghDelete(path,sha,message){
+    const r=await fetch(`https://api.github.com/repos/${REPO}/contents/${path}`,{method:'DELETE',headers:{'Authorization':`token ${GH_TOKEN}`,'Accept':'application/vnd.github.v3+json','Content-Type':'application/json'},body:JSON.stringify({message,sha,branch:BRANCH})});
+    if(!r.ok) throw new Error(await r.text());
+}
+async function ghPutBinary(path,b64,message){
+    const r=await fetch(`https://api.github.com/repos/${REPO}/contents/${path}`,{method:'PUT',headers:{'Authorization':`token ${GH_TOKEN}`,'Accept':'application/vnd.github.v3+json','Content-Type':'application/json'},body:JSON.stringify({message,content:b64,branch:BRANCH})});
+    if(!r.ok) throw new Error(await r.text()); return r.json();
 }
 
-// ══════════════════════════════════════════════
-// STATS
-// ══════════════════════════════════════════════
-async function loadStats() {
-    try {
-        const n = await ghGet(`${BASE_PATH}/content/noticias`);
-        document.getElementById('statNoticias').textContent = n.filter(f => f.name.endsWith('.md')).length;
-    } catch { document.getElementById('statNoticias').textContent = '0'; }
-    try {
-        const d = await ghGet(`${BASE_PATH}/content/documentos`);
-        document.getElementById('statDocs').textContent = d.filter(f => f.name.endsWith('.md')).length;
-    } catch { document.getElementById('statDocs').textContent = '0'; }
+// ── STATS ──
+async function loadStats(){
+    try{ const n=await ghGet(`${BASE}/content/noticias`); document.getElementById('statNoticias').textContent=n.filter(f=>f.name.endsWith('.md')).length; }catch{ document.getElementById('statNoticias').textContent='0'; }
+    try{ const d=await ghGet(`${BASE}/content/documentos`); document.getElementById('statDocs').textContent=d.filter(f=>f.name.endsWith('.md')).length; }catch{ document.getElementById('statDocs').textContent='0'; }
 }
 
-// ══════════════════════════════════════════════
-// PUBLICAR NOTICIA
-// ══════════════════════════════════════════════
-function slugify(text) {
-    return text.toLowerCase()
-        .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
-        .replace(/[^a-z0-9\s-]/g, '')
-        .trim().replace(/\s+/g, '-').slice(0, 60);
+// ── HELPERS ──
+function slugify(t){ return t.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9\s-]/g,'').trim().replace(/\s+/g,'-').slice(0,60); }
+function parseFM(text){
+    const m=text.match(/^---\n([\s\S]*?)\n---/);
+    if(!m) return{data:{},body:text};
+    const data={};
+    m[1].split('\n').forEach(l=>{ const[k,...v]=l.split(':'); if(k&&v.length) data[k.trim()]=v.join(':').trim().replace(/^["']|["']$/g,''); });
+    return{data,body:text.replace(m[0],'').trim()};
+}
+function formatDate(ds){ if(!ds) return''; const d=new Date(ds); const mo=['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic']; return`${d.getDate()} ${mo[d.getMonth()]} ${d.getFullYear()}`; }
+function buildFM(data,body=''){
+    let fm='---\n';
+    Object.entries(data).forEach(([k,v])=>{ if(v!==undefined&&v!=='') fm+=`${k}: "${String(v).replace(/"/g,"'")}"\n`; });
+    fm+='---\n'; if(body) fm+='\n'+body; return fm;
 }
 
-async function publishNoticia() {
-    const title   = document.getElementById('n-title').value.trim();
-    const cat     = document.getElementById('n-cat').value;
-    const date    = document.getElementById('n-date').value;
-    const excerpt = document.getElementById('n-excerpt').value.trim();
-    const body    = document.getElementById('n-body').value.trim();
-    const link    = document.getElementById('n-link').value.trim();
-
-    if (!title || !date || !excerpt) { showToast('Completa los campos obligatorios', 'error'); return; }
-
-    const btn = document.getElementById('btnPublishNoticia');
-    btn.disabled = true;
-    btn.innerHTML = '<div class="spinner"></div> Publicando...';
-
-    const slug     = `${date}-${slugify(title)}`;
-    const filename = `${BASE_PATH}/content/noticias/${slug}.md`;
-    const frontmatter = `---
-title: "${title.replace(/"/g, "'")}"
-date: "${date}T12:00:00.000-05:00"
-category: "${cat}"
-excerpt: "${excerpt.replace(/"/g, "'")}"
-${link ? `link: "${link}"` : ''}
----
-
-${body}`;
-
-    try {
-        await ghPut(filename, frontmatter, `Nueva noticia: ${title}`);
-        showToast('✓ Noticia publicada correctamente. Aparecerá en el sitio en ~30 segundos.', 'success');
-        clearNoticiaForm();
-        loadStats();
-    } catch(e) {
-        showToast('Error al publicar. Verifica tu conexión.', 'error');
-        console.error(e);
-    }
-
-    btn.disabled = false;
-    btn.innerHTML = '<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg> Publicar Noticia';
+// ── PUBLICAR NOTICIA ──
+async function publishNoticia(){
+    const title=document.getElementById('n-title').value.trim();
+    const cat=document.getElementById('n-cat').value;
+    const date=document.getElementById('n-date').value;
+    const excerpt=document.getElementById('n-excerpt').value.trim();
+    const body=document.getElementById('n-body').value.trim();
+    const link=document.getElementById('n-link').value.trim();
+    if(!title||!date||!excerpt){showToast('Completa los campos obligatorios','error');return;}
+    const btn=document.getElementById('btnPublishNoticia'); btn.disabled=true;
+    document.getElementById('btnNoticiaLabel').textContent='Publicando...';
+    const slug=`${date}-${slugify(title)}`;
+    const content=buildFM({title,date:`${date}T12:00:00.000-05:00`,category:cat,excerpt,link},body);
+    try{ await ghPut(`${BASE}/content/noticias/${slug}.md`,content,`Nueva noticia: ${title}`); showToast('✓ Noticia publicada. Aparece en ~30 segundos.','success'); clearNoticiaForm(); loadStats(); }
+    catch(e){ showToast('Error al publicar. Verifica el token.','error'); }
+    btn.disabled=false; document.getElementById('btnNoticiaLabel').textContent='Publicar Noticia';
+}
+function clearNoticiaForm(){
+    ['n-title','n-excerpt','n-body','n-link'].forEach(id=>document.getElementById(id).value='');
+    document.getElementById('n-cat').value='comunicados';
+    document.getElementById('n-date').value=new Date().toISOString().split('T')[0];
 }
 
-function clearNoticiaForm() {
-    ['n-title','n-excerpt','n-body','n-link'].forEach(id => document.getElementById(id).value = '');
-    document.getElementById('n-cat').value = 'comunicados';
-    document.getElementById('n-date').value = new Date().toISOString().split('T')[0];
+// ── PUBLICAR DOCUMENTO ──
+let selectedFile=null;
+function fileSelected(input){ selectedFile=input.files[0]; if(selectedFile){document.getElementById('fileSelectedMsg').textContent=`✓ ${selectedFile.name}`;document.getElementById('fileSelectedMsg').style.display='block';} }
+function dragOver(e){e.preventDefault();document.getElementById('fileDrop').classList.add('dragover');}
+function dragLeave(e){document.getElementById('fileDrop').classList.remove('dragover');}
+function dropFile(e){e.preventDefault();dragLeave(e);const f=e.dataTransfer.files[0];if(f&&f.type==='application/pdf'){selectedFile=f;document.getElementById('fileSelectedMsg').textContent=`✓ ${f.name}`;document.getElementById('fileSelectedMsg').style.display='block';}else showToast('Solo se aceptan PDFs','error');}
+function fileToBase64(f){return new Promise((res,rej)=>{const r=new FileReader();r.onload=()=>res(r.result.split(',')[1]);r.onerror=rej;r.readAsDataURL(f);});}
+
+async function publishDoc(){
+    const title=document.getElementById('d-title').value.trim();
+    const type=document.getElementById('d-type').value;
+    const line=document.getElementById('d-line').value;
+    const date=document.getElementById('d-date').value;
+    const excerpt=document.getElementById('d-excerpt').value.trim();
+    if(!title||!date||!excerpt||!selectedFile){showToast('Completa todos los campos y selecciona un PDF','error');return;}
+    const btn=document.getElementById('btnPublishDoc'); btn.disabled=true;
+    document.getElementById('btnDocLabel').textContent='Subiendo PDF...';
+    try{
+        const b64=await fileToBase64(selectedFile);
+        const pdfSlug=slugify(selectedFile.name.replace('.pdf',''));
+        const pdfPath=`${BASE}/documentos/${date}-${pdfSlug}.pdf`;
+        await ghPutBinary(pdfPath,b64,`PDF: ${title}`);
+        document.getElementById('btnDocLabel').textContent='Publicando...';
+        const slug=`${date}-${slugify(title)}`;
+        const pdfUrl=`/documentos/${date}-${pdfSlug}.pdf`;
+        await ghPut(`${BASE}/content/documentos/${slug}.md`,buildFM({title,date:`${date}T12:00:00.000-05:00`,type,line,excerpt,pdf:pdfUrl}),`Nuevo documento: ${title}`);
+        showToast('✓ Documento publicado. Aparece en ~30 segundos.','success'); clearDocForm(); loadStats();
+    }catch(e){showToast('Error al subir. Verifica el token.','error');}
+    btn.disabled=false; document.getElementById('btnDocLabel').textContent='Subir y Publicar';
+}
+function clearDocForm(){
+    ['d-title','d-excerpt'].forEach(id=>document.getElementById(id).value='');
+    document.getElementById('d-type').value='DI'; document.getElementById('d-line').value='juridica';
+    document.getElementById('d-date').value=new Date().toISOString().split('T')[0];
+    document.getElementById('d-file').value=''; document.getElementById('fileSelectedMsg').style.display='none'; selectedFile=null;
 }
 
-// ══════════════════════════════════════════════
-// PUBLICAR DOCUMENTO
-// ══════════════════════════════════════════════
-let selectedFile = null;
-
-function fileSelected(input) {
-    selectedFile = input.files[0];
-    if (selectedFile) {
-        document.getElementById('fileSelectedMsg').textContent = `✓ ${selectedFile.name}`;
-        document.getElementById('fileSelectedMsg').style.display = 'block';
-    }
-}
-
-function dragOver(e) { e.preventDefault(); document.getElementById('fileDrop').classList.add('dragover'); }
-function dragLeave(e) { document.getElementById('fileDrop').classList.remove('dragover'); }
-function dropFile(e) {
-    e.preventDefault();
-    dragLeave(e);
-    const file = e.dataTransfer.files[0];
-    if (file && file.type === 'application/pdf') {
-        selectedFile = file;
-        document.getElementById('fileSelectedMsg').textContent = `✓ ${file.name}`;
-        document.getElementById('fileSelectedMsg').style.display = 'block';
-    } else {
-        showToast('Solo se aceptan archivos PDF', 'error');
-    }
-}
-
-async function fileToBase64(file) {
-    return new Promise((res, rej) => {
-        const r = new FileReader();
-        r.onload = () => res(r.result.split(',')[1]);
-        r.onerror = rej;
-        r.readAsDataURL(file);
-    });
-}
-
-async function publishDoc() {
-    const title   = document.getElementById('d-title').value.trim();
-    const type    = document.getElementById('d-type').value;
-    const line    = document.getElementById('d-line').value;
-    const date    = document.getElementById('d-date').value;
-    const excerpt = document.getElementById('d-excerpt').value.trim();
-
-    if (!title || !date || !excerpt || !selectedFile) {
-        showToast('Completa todos los campos y selecciona un PDF', 'error'); return;
-    }
-
-    const btn = document.getElementById('btnPublishDoc');
-    btn.disabled = true;
-    btn.innerHTML = '<div class="spinner"></div> Subiendo PDF...';
-
-    try {
-        // 1. Sube el PDF
-        const b64 = await fileToBase64(selectedFile);
-        const pdfSlug = slugify(selectedFile.name.replace('.pdf',''));
-        const pdfPath = `${BASE_PATH}/documentos/${date}-${pdfSlug}.pdf`;
-        await ghPutBinary(pdfPath, b64, `PDF: ${title}`);
-
-        btn.innerHTML = '<div class="spinner"></div> Publicando...';
-
-        // 2. Crea el archivo MD con los metadatos
-        const slug = `${date}-${slugify(title)}`;
-        const mdPath = `${BASE_PATH}/content/documentos/${slug}.md`;
-        const pdfUrl = `/documentos/${date}-${pdfSlug}.pdf`;
-        const frontmatter = `---
-title: "${title.replace(/"/g, "'")}"
-date: "${date}T12:00:00.000-05:00"
-type: "${type}"
-line: "${line}"
-excerpt: "${excerpt.replace(/"/g, "'")}"
-pdf: "${pdfUrl}"
----
-`;
-        await ghPut(mdPath, frontmatter, `Nuevo documento CEPOE: ${title}`);
-
-        showToast('✓ Documento publicado correctamente. Aparecerá en el sitio en ~30 segundos.', 'success');
-        clearDocForm();
-        loadStats();
-    } catch(e) {
-        showToast('Error al subir. Verifica tu conexión.', 'error');
-        console.error(e);
-    }
-
-    btn.disabled = false;
-    btn.innerHTML = '<svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="16" height="16"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg> Subir y Publicar';
-}
-
-function clearDocForm() {
-    ['d-title','d-excerpt'].forEach(id => document.getElementById(id).value = '');
-    document.getElementById('d-type').value = 'DI';
-    document.getElementById('d-line').value = 'juridica';
-    document.getElementById('d-date').value = new Date().toISOString().split('T')[0];
-    document.getElementById('d-file').value = '';
-    document.getElementById('fileSelectedMsg').style.display = 'none';
-    selectedFile = null;
-}
-
-// ══════════════════════════════════════════════
-// LISTAR ITEMS
-// ══════════════════════════════════════════════
-function parseFM(text) {
-    const m = text.match(/^---\n([\s\S]*?)\n---/);
-    if (!m) return {};
-    const d = {};
-    m[1].split('\n').forEach(l => {
-        const [k, ...v] = l.split(':');
-        if (k && v.length) d[k.trim()] = v.join(':').trim().replace(/^["']|["']$/g,'');
-    });
-    return d;
-}
-
-function formatDate(ds) {
-    if (!ds) return '';
-    const d = new Date(ds);
-    const months = ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic'];
-    return `${d.getDate()} ${months[d.getMonth()]} ${d.getFullYear()}`;
-}
-
-async function loadItems(type) {
-    const listEl = document.getElementById('list-' + type);
-    const folder = type === 'noticias' ? 'noticias' : 'documentos';
-    listEl.innerHTML = '<div class="list-empty">Cargando...</div>';
-
-    try {
-        const files = await ghGet(`${BASE_PATH}/content/${folder}`);
-        const mdFiles = files.filter(f => f.name.endsWith('.md'));
-        if (mdFiles.length === 0) { listEl.innerHTML = '<div class="list-empty">No hay publicaciones todavía.</div>'; return; }
-
-        const texts = await Promise.all(mdFiles.map(f => fetch(f.download_url).then(r => r.text())));
-        const items = texts.map((t, i) => ({ ...parseFM(t), file: mdFiles[i].name }))
-                           .sort((a, b) => new Date(b.date) - new Date(a.date));
-
-        listEl.innerHTML = items.map(item => {
-            const badge = type === 'noticias'
-                ? `<span class="list-item-badge badge-${item.category}">${item.category || ''}</span>`
-                : `<span class="list-item-badge badge-${item.type}">${item.type || ''}</span>`;
-            return `
-            <div class="list-item">
-                <div class="list-item-info">
-                    <h4>${item.title || 'Sin título'}</h4>
-                    <p>${formatDate(item.date)}${item.excerpt ? ' · ' + item.excerpt.slice(0,80) + '...' : ''}</p>
-                </div>
-                ${badge}
-            </div>`;
+// ── LISTAR ──
+async function loadItems(type){
+    const listEl=document.getElementById('list-'+type);
+    const folder=type==='noticias'?'noticias':'documentos';
+    listEl.innerHTML='<div class="list-empty">Cargando...</div>';
+    try{
+        const files=await ghGet(`${BASE}/content/${folder}`);
+        const mdFiles=files.filter(f=>f.name.endsWith('.md'));
+        if(!mdFiles.length){listEl.innerHTML='<div class="list-empty">No hay publicaciones todavía.</div>';return;}
+        const texts=await Promise.all(mdFiles.map(f=>fetch(f.download_url).then(r=>r.text())));
+        const items=texts.map((t,i)=>({...parseFM(t).data,body:parseFM(t).body,slug:mdFiles[i].name.replace('.md',''),sha:mdFiles[i].sha})).sort((a,b)=>new Date(b.date)-new Date(a.date));
+        listEl.innerHTML=items.map(item=>{
+            const badge=type==='noticias'?`<span class="list-item-badge badge-${item.category}">${item.category||''}</span>`:`<span class="list-item-badge badge-${item.type}">${item.type||''}</span>`;
+            const canEdit=(type==='noticias'&&perms.noticias)||(type==='documentos'&&perms.docs);
+            const editBtn=canEdit?`<button class="btn-icon" onclick="${type==='noticias'?`openEditNoticia('${item.slug}')`:`openEditDoc('${item.slug}')`}"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="13" height="13"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>Editar</button>`:'';
+            const delBtn=perms.borrar?`<button class="btn-icon danger" onclick="confirmDelete('${type}','${item.slug}','${item.sha}','${(item.title||'').replace(/'/g,"\\'")}')"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="13" height="13"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>Borrar</button>`:'';
+            return`<div class="list-item"><div class="list-item-info"><h4>${item.title||'Sin título'}</h4><p>${formatDate(item.date)}${item.excerpt?' · '+item.excerpt.slice(0,70)+'...':''}</p></div><div style="display:flex;align-items:center;gap:8px;">${badge}<div class="list-item-actions">${editBtn}${delBtn}</div></div></div>`;
         }).join('');
-    } catch(e) {
-        listEl.innerHTML = '<div class="list-empty">Error al cargar. Verifica tu conexión.</div>';
+    }catch(e){listEl.innerHTML='<div class="list-empty">Error al cargar. Verifica el token.</div>';}
+}
+
+// ── EDITAR NOTICIA ──
+async function openEditNoticia(slug){
+    try{
+        const file=await ghGet(`${BASE}/content/noticias/${slug}.md`);
+        const text=decodeURIComponent(escape(atob(file.content.replace(/\n/g,''))));
+        const{data,body}=parseFM(text);
+        document.getElementById('m-n-title').value=data.title||'';
+        document.getElementById('m-n-cat').value=data.category||'comunicados';
+        document.getElementById('m-n-date').value=(data.date||'').slice(0,10);
+        document.getElementById('m-n-excerpt').value=data.excerpt||'';
+        document.getElementById('m-n-body').value=body||'';
+        document.getElementById('m-n-link').value=data.link||'';
+        document.getElementById('m-n-slug').value=slug;
+        document.getElementById('m-n-sha').value=file.sha;
+        document.getElementById('modalNoticia').classList.add('show');
+    }catch(e){showToast('Error al cargar la noticia','error');}
+}
+async function saveEditNoticia(){
+    const slug=document.getElementById('m-n-slug').value;
+    const sha=document.getElementById('m-n-sha').value;
+    const title=document.getElementById('m-n-title').value.trim();
+    const cat=document.getElementById('m-n-cat').value;
+    const date=document.getElementById('m-n-date').value;
+    const excerpt=document.getElementById('m-n-excerpt').value.trim();
+    const body=document.getElementById('m-n-body').value.trim();
+    const link=document.getElementById('m-n-link').value.trim();
+    if(!title||!date||!excerpt){showToast('Completa los campos obligatorios','error');return;}
+    const btn=document.getElementById('btnSaveNoticia'); btn.disabled=true;
+    try{ await ghPut(`${BASE}/content/noticias/${slug}.md`,buildFM({title,date:`${date}T12:00:00.000-05:00`,category:cat,excerpt,link},body),`Edita noticia: ${title}`,sha); showToast('✓ Noticia actualizada.','success'); closeModal('modalNoticia'); loadItems('noticias'); }
+    catch(e){showToast('Error al guardar.','error');}
+    btn.disabled=false;
+}
+
+// ── EDITAR DOC ──
+async function openEditDoc(slug){
+    try{
+        const file=await ghGet(`${BASE}/content/documentos/${slug}.md`);
+        const text=decodeURIComponent(escape(atob(file.content.replace(/\n/g,''))));
+        const{data}=parseFM(text);
+        document.getElementById('m-d-title').value=data.title||'';
+        document.getElementById('m-d-type').value=data.type||'DI';
+        document.getElementById('m-d-line').value=data.line||'seguridad';
+        document.getElementById('m-d-date').value=(data.date||'').slice(0,10);
+        document.getElementById('m-d-excerpt').value=data.excerpt||'';
+        document.getElementById('m-d-slug').value=slug;
+        document.getElementById('m-d-sha').value=file.sha;
+        document.getElementById('m-d-pdf').value=data.pdf||'';
+        document.getElementById('modalDoc').classList.add('show');
+    }catch(e){showToast('Error al cargar el documento','error');}
+}
+async function saveEditDoc(){
+    const slug=document.getElementById('m-d-slug').value;
+    const sha=document.getElementById('m-d-sha').value;
+    const title=document.getElementById('m-d-title').value.trim();
+    const type=document.getElementById('m-d-type').value;
+    const line=document.getElementById('m-d-line').value;
+    const date=document.getElementById('m-d-date').value;
+    const excerpt=document.getElementById('m-d-excerpt').value.trim();
+    const pdf=document.getElementById('m-d-pdf').value;
+    if(!title||!date||!excerpt){showToast('Completa los campos obligatorios','error');return;}
+    const btn=document.getElementById('btnSaveDoc'); btn.disabled=true;
+    try{ await ghPut(`${BASE}/content/documentos/${slug}.md`,buildFM({title,date:`${date}T12:00:00.000-05:00`,type,line,excerpt,pdf}),`Edita documento: ${title}`,sha); showToast('✓ Documento actualizado.','success'); closeModal('modalDoc'); loadItems('documentos'); }
+    catch(e){showToast('Error al guardar.','error');}
+    btn.disabled=false;
+}
+
+// ── BORRAR ──
+function confirmDelete(type,slug,sha,title){
+    document.getElementById('confirmTitle').textContent='¿Eliminar esta publicación?';
+    document.getElementById('confirmMsg').textContent=`"${title}" será eliminada permanentemente del sitio.`;
+    document.getElementById('confirmBox').classList.add('show');
+    document.getElementById('confirmOk').onclick=async()=>{
+        closeConfirm();
+        try{ await ghDelete(`${BASE}/content/${type==='noticias'?'noticias':'documentos'}/${slug}.md`,sha,`Elimina: ${title}`); showToast('✓ Eliminado correctamente.','success'); loadItems(type); loadStats(); }
+        catch(e){showToast('Error al eliminar.','error');}
+    };
+}
+function closeConfirm(){document.getElementById('confirmBox').classList.remove('show');}
+
+// ── USUARIOS ──
+function renderUsers(){
+    const users=getUsers();
+    const el=document.getElementById('usersList');
+    const roleLabels={admin:'Admin',noticiero:'Noticiero',repositorio:'Repositorio'};
+    const roleColors={admin:'badge-eventos',noticiero:'badge-comunicados',repositorio:'badge-prensa'};
+    el.innerHTML=users.map((u,i)=>`
+        <div class="user-card">
+            <div class="user-info"><h4>${u.username}</h4><p>Rol: ${roleLabels[u.role]||u.role}</p></div>
+            <div style="display:flex;align-items:center;gap:8px;">
+                <span class="list-item-badge ${roleColors[u.role]}">${roleLabels[u.role]||u.role}</span>
+                <button class="btn-icon" onclick="openEditUser(${i})"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="13" height="13"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>Editar</button>
+                ${u.username!==currentUser?`<button class="btn-icon danger" onclick="deleteUser(${i},'${u.username}')"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" width="13" height="13"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>Borrar</button>`:''}
+            </div>
+        </div>`).join('');
+}
+function openUserModal(){
+    document.getElementById('u-username').value=''; document.getElementById('u-password').value=''; document.getElementById('u-role').value='noticiero'; document.getElementById('u-editing').value='';
+    document.getElementById('modalUserTitle').textContent='Nuevo Usuario'; document.getElementById('u-username').disabled=false;
+    document.getElementById('modalUser').classList.add('show');
+}
+function openEditUser(index){
+    const u=getUsers()[index];
+    document.getElementById('u-username').value=u.username; document.getElementById('u-password').value=u.password; document.getElementById('u-role').value=u.role; document.getElementById('u-editing').value=index;
+    document.getElementById('modalUserTitle').textContent='Editar Usuario'; document.getElementById('u-username').disabled=true;
+    document.getElementById('modalUser').classList.add('show');
+}
+function saveUser(){
+    const username=document.getElementById('u-username').value.trim();
+    const password=document.getElementById('u-password').value;
+    const role=document.getElementById('u-role').value;
+    const editing=document.getElementById('u-editing').value;
+    if(!username||!password){showToast('Completa usuario y contraseña','error');return;}
+    if(password.length<6){showToast('La contraseña debe tener al menos 6 caracteres','error');return;}
+    const users=getUsers();
+    if(editing!==''){
+        users[parseInt(editing)]={username,password,role};
+        showToast('✓ Usuario actualizado.','success');
+    } else {
+        if(users.find(u=>u.username===username)){showToast('Ese usuario ya existe','error');return;}
+        users.push({username,password,role});
+        showToast('✓ Usuario creado.','success');
     }
+    saveUsers(users); document.getElementById('statUsers').textContent=users.length;
+    closeModal('modalUser'); renderUsers();
+}
+function deleteUser(index,username){
+    if(username===currentUser){showToast('No puedes eliminarte a ti mismo','error');return;}
+    document.getElementById('confirmTitle').textContent='¿Eliminar usuario?';
+    document.getElementById('confirmMsg').textContent=`El usuario "${username}" perderá acceso al panel.`;
+    document.getElementById('confirmBox').classList.add('show');
+    document.getElementById('confirmOk').onclick=()=>{
+        const users=getUsers(); users.splice(index,1); saveUsers(users);
+        closeConfirm(); showToast('✓ Usuario eliminado.','success'); renderUsers();
+        document.getElementById('statUsers').textContent=users.length;
+    };
 }
 
-// ══════════════════════════════════════════════
-// EDITOR MARKDOWN
-// ══════════════════════════════════════════════
-function insertMD(before, after) {
-    const ta = document.getElementById('n-body');
-    const s = ta.selectionStart, e = ta.selectionEnd;
-    const selected = ta.value.substring(s, e);
-    ta.value = ta.value.substring(0, s) + before + selected + after + ta.value.substring(e);
-    ta.focus();
-    ta.selectionStart = s + before.length;
-    ta.selectionEnd   = s + before.length + selected.length;
+// ── MODALES ──
+function closeModal(id){document.getElementById(id).classList.remove('show');}
+document.querySelectorAll('.modal-overlay').forEach(m=>{ m.addEventListener('click',e=>{if(e.target===m)m.classList.remove('show');}); });
+
+// ── EDITOR MD ──
+function insertMD(before,after){
+    const ta=document.getElementById('n-body');
+    const s=ta.selectionStart,e=ta.selectionEnd,sel=ta.value.substring(s,e);
+    ta.value=ta.value.substring(0,s)+before+sel+after+ta.value.substring(e);
+    ta.focus(); ta.selectionStart=s+before.length; ta.selectionEnd=s+before.length+sel.length;
 }
 
-// ══════════════════════════════════════════════
-// TOAST
-// ══════════════════════════════════════════════
+// ── TOAST ──
 let toastTimer;
-function showToast(msg, type='') {
-    const t = document.getElementById('toast');
-    t.textContent = msg;
-    t.className = 'toast show' + (type ? ' ' + type : '');
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => t.className = 'toast', 4000);
+function showToast(msg,type=''){
+    const t=document.getElementById('toast'); t.textContent=msg;
+    t.className='toast show'+(type?' '+type:'');
+    clearTimeout(toastTimer); toastTimer=setTimeout(()=>t.className='toast',4500);
 }
 </script>
 </body>
